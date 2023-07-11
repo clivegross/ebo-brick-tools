@@ -1,0 +1,72 @@
+﻿bldg,rdfs:label,rdf:type,equipment_rdf:type,brick:hasLocation,brick:hasUnit,nsp:hasPath
+_SaTmpSp,Supply Air Temperature Setpoint,brick:Supply_Air_Temperature_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/SaTmpSp//Value
+_ZnTmpSp,Zone Air Temperature Setpoint,brick:Zone_Air_Humidity_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/ZnTmpSp//Value
+_RaTmpSp,Return Air Temperature Setpoint,brick:Return_Air_Temperature_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/RaTmpSp//Value
+_RaRhSp,Return Air Humidity Setpoint,brick:Return_Air_Humidity_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:PERCENT_RH,{EBO_path}/{Id}/Setpoints/RaRhSp//Value
+_FanSpd,Fan Speed Status,brick:Speed_Status,brick:Computer_Room_Air_Conditioning,,unit:PERCENT,{EBO_path}/{Id}/Variables/FanSpd//Value
+_ChwVlv,Chilled Water Valve,brick:Chilled_Water_Valve,brick:Computer_Room_Air_Conditioning,,unit:PERCENT,{EBO_path}/{Id}/Variables/ChwVlv//Value
+_VoltsA,Voltage Sensor,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,
+_VoltsB,Voltage Sensor,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,
+_VoltsC,Voltage Sensor,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,
+_PowerFreq,Power Frequency,brick:Frequency_Sensor,brick:Computer_Room_Air_Conditioning,,unit:HZ,
+_SaTmp1,Supply Air Temperature Sensor,brick:Supply_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/SaTmp1//Value
+_SaTmp2,Supply Air Temperature Sensor,brick:Supply_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/SaTmp2//Value
+_RaTmp,Return Air Temperature Sensor,brick:Return_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/RaTmp//Value
+_RaRh,Return Air Humidity Sensor,brick:Return_Air_Humidity_Sensor,brick:Computer_Room_Air_Conditioning,,unit:PERCENT_RH,{EBO_path}/{Id}/Variables/RaRh//Value
+_ZnTmp,Zone Air Temperature Sensor,brick:Zone_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,IRD-ICG-L05M-PIC-02,unit:DEG_C,{EBO_path}/{Id}/Variables/ZnTmp//Value
+_ZnRh,Zone Air Humidity Sensor,brick:Zone_Air_Humidity_Sensor,brick:Computer_Room_Air_Conditioning,IRD-ICG-L05M-PIC-02,unit:PERCENT_RH,
+_ChwInletTmp,Chilled Water Supply Temperature Sensor,brick:Chilled_Water_Supply_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,
+_ChwOutletTmp,Chilled Water Return Temperature Sensor,brick:Chilled_Water_Return_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,
+_Available,Availability Status,brick:Availability_Status,brick:Computer_Room_Air_Conditioning,,,
+_remoteshutdownalarm,remoteshutdownalarm,brick:Overridden_Off_Status,brick:Computer_Room_Air_Conditioning,,,
+_waterunderflooralarm,waterunderflooralarm,brick:Liquid_Detection_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_condensatewateroverflowalarm,condensatewateroverflowalarm,brick:Water_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_heaterfail,heaterfail,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_humidifierfail,humidifierfail,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_fanfail,fanfail,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Fan Failure//AlarmState
+_fanmaintenance,fanmaintenance,brick:Maintenance_Required_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_airfilterclogged,airfilterclogged,brick:Filter_Status,brick:Computer_Room_Air_Conditioning,,,
+_airfiltermaintenance,airfiltermaintenance,brick:Maintenance_Required_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_airfilterpressuredifference,airfilterpressuredifference,brick:Pressure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_chilledwatervalvefail,chilledwatervalvefail,brick:Valve_Position_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_chilledwatervalvemaintenance,chilledwatervalvemaintenance,brick:Maintenance_Required_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_condensatepumpfail,condensatepumpfail,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lossofairflow,lossofairflow,brick:Air_Flow_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lossofwaterflow,lossofwaterflow,brick:Water_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_chilledwaterlowflow,chilledwaterlowflow,brick:Water_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_digitalinputsensorcommunication,digitalinputsensorcommunication,brick:Communication_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_highreturntemperature,highreturntemperature,brick:High_Return_Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lowreturntemperature,lowreturntemperature,brick:Low_Return_Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_highreturnhumidity,highreturnhumidity,brick:High_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lowreturnhumidity,lowreturnhumidity,brick:Low_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_highsupplytemperature,highsupplytemperature,brick:High_Supply_Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lowsupplytemperature,lowsupplytemperature,brick:Low_Supply_Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_highsupplyhumidity,highsupplyhumidity,brick:High_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lowsupplyhumidity,lowsupplyhumidity,brick:Low_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_highremotetemperature,highremotetemperature,brick:Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lowremotetemperature,lowremotetemperature,brick:Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_highremotehumidity,highremotehumidity,brick:High_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lowremotehumidity,lowremotehumidity,brick:Low_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_hightemperatureinletchilled,hightemperatureinletchilled,brick:Water_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lowtemperatureinletchilledwater,lowtemperatureinletchilledwater,brick:Water_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_hightemperatureoutletchilledwater,hightemperatureoutletchilledwater,brick:Water_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lowtemperatureoutletchilledwater,lowtemperatureoutletchilledwater,brick:Water_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_returntemperaturesensorfail,returntemperaturesensorfail,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_returnhumiditysensorfail,returnhumiditysensorfail,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_airflowtemperaturesensorfail,airflowtemperaturesensorfail,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_supplytemperaturesensorfail,supplytemperaturesensorfail,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_supplyhumiditysensorfail,supplyhumiditysensorfail,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_remotetemperaturesensorfail,remotetemperaturesensorfail,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_remotehumiditysensorfail,remotehumiditysensorfail,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_staticpressuresensorfail,staticpressuresensorfail,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_chilledwaterpressuresensorfail,chilledwaterpressuresensorfail,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_chilledwaterflowfail,chilledwaterflowfail,brick:Water_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_Loss_of_power,Loss of power,brick:Power_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_Power_Over_Voltage_Alarm,Power Over Voltage Alarm,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_Power_Under_Voltage_Alarm,Power Under Voltage Alarm,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_Power_Frequency_Offset,Power Frequency Offset,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_Power_Phase_Loss_Alarm,Power Phase Loss Alarm,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_Power_Phase_Reverse_Alarm,Power Phase Reverse Alarm,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lossofunitmaster,lossofunitmaster,brick:Communication_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_lossofunitslave,lossofunitslave,brick:Communication_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,
+_SNMP_Device_Offline,SNMP Device Offline,brick:Communication_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,
