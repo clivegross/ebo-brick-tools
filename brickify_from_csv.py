@@ -3,18 +3,11 @@
 # Description: Creates a Brick schema ttl file from a csv data file and config yml file.
 # Used with brickify to construct a Brick Schema database from ttl files. Read:
 # https://brickschema.readthedocs.io/en/latest/brickify/index.html.
-# csv file expected with the following headers:
+# csv file headers should match the expected config. For example, equipment and point data:
 # Id,rdf_label,rdf_type,brick_hasLocation,brick_isFedBy,brick_hasUnit,brick_isPointOf,EBO_path
 # Author: Clive Gross
 # Last updated: 11-07-2023
 import subprocess
-
-# set the path to the equipment data csv here:
-csv_file = "example/in_row_cooler_data.csv"
-# set the config yaml file name here:
-config_file = "example/equipment_model_in_row_cooler.yml"
-# set the output ttl file  here:
-output_file = "example/in_row_cooler_model.ttl"
 
 
 def execute_command(command):
@@ -42,7 +35,22 @@ def brickify_command(csv_file, output_file, config_file, input_type="csv"):
 
 
 if __name__ == '__main__':
+    # set the path to the equipment data csv here:
+    equipment_data = "example/in_row_cooler_data.csv"
+    # set the config yaml file name here:
+    config_file = "example/equipment_model_in_row_cooler.yml"
+    # set the output ttl file  here:
+    output_file = "example/in_row_cooler_model.ttl"
     # Example usage
-    brickify_command(csv_file, output_file, config_file)
+    brickify_command(equipment_data, output_file, config_file)
+
+    # set the path to the location data csv here:
+    location_data = "example/location_model.csv"
+    # set the config yaml file name here:
+    location_model_config = "example/location_model.yml"
+    # set the output ttl file  here:
+    location_model_output = "example/location_model.ttl"
+    # Example usage
+    brickify_command(location_data, location_model_output, location_model_config)
     
 

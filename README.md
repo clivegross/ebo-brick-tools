@@ -66,7 +66,7 @@ make_config(equipment_model_points_csv_file, config_file, equipment_rdf_type)
 
 ## Create Brick models from csv
 
-Use brickify to create a Brick model ttl file from input csv data and a brickify config file.
+Use brickify to create a Brick model ttl file from input csv data and a brickify config file. This can be used for any part of a Brick model, equipment, points, location data etc.
 
 ![equipment model points csv](images/in_row_cooler_data.csv.png)
 

@@ -1,0 +1,291 @@
+@prefix bldg: <https://example.com/bldg#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+bldg:IRD-ICG-B01-BSA-01 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-BSA-01 WAITING ROOMS" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-BSA-02 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-BSA-02 WAITING ROOM 2" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-CSV-01 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-CSV-01 BOH CORRIDOR" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-EFS-01 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-EFS-01 0-SF01" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-PHY-01 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-PHY-01 GREY WATER PUMP ROOM" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-PHY-02 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-PHY-02 GREY WATER TREATMENT PLANT" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-PME-09 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-PME-09 FAN ROOM" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-SFS-06 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-SFS-06 FIRE" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-SIC-01 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-SIC-01 COMMS" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-SME-11 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-SME-11 MECH" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B01-SME-99 a brick:Room ;
+    rdfs:label "IRD-ICG-B01-SME-99 MECH" ;
+    brick:hasLocation bldg:IRD-ICG-B01 .
+
+bldg:IRD-ICG-B02 a brick:Floor ;
+    rdfs:label "ICG-B02" ;
+    brick:hasLocation bldg:ICG-Basement .
+
+bldg:IRD-ICG-B03-LGL-02 a brick:Room ;
+    rdfs:label "IRD-ICG-B03-LGL-02 PUBLIC LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-B03 .
+
+bldg:IRD-ICG-B04-LGL-01 a brick:Room ;
+    rdfs:label "IRD-ICG-B04-LGL-01 PUBLIC LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-B04 .
+
+bldg:IRD-ICG-B04-LGL-02 a brick:Room ;
+    rdfs:label "IRD-ICG-B04-LGL-02 PUBLIC LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-B04 .
+
+bldg:IRD-ICG-B05-LGL-02 a brick:Room ;
+    rdfs:label "IRD-ICG-B05-LGL-02 PUBLIC LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-B05 .
+
+bldg:IRD-ICG-F01 a brick:Floor ;
+    rdfs:label "ICG-F01" ;
+    brick:hasLocation bldg:ICG-Basement .
+
+bldg:IRD-ICG-L00-LGS-02 a brick:Room ;
+    rdfs:label "IRD-ICG-L00-LGS-02 TABLE HOIST" ;
+    brick:hasLocation bldg:IRD-ICG-L00 .
+
+bldg:IRD-ICG-L00-PIC-01 a brick:Room ;
+    rdfs:label "IRD-ICG-L00-PIC-01 MCR/DC2" ;
+    brick:hasLocation bldg:IRD-ICG-L00 .
+
+bldg:IRD-ICG-L01-BSR-01 a brick:Room ;
+    rdfs:label "IRD-ICG-L01-BSR-01 UNIFORM WARDROBE & STORE" ;
+    brick:hasLocation bldg:IRD-ICG-L01 .
+
+bldg:IRD-ICG-L01-LGS-01 a brick:Room ;
+    rdfs:label "IRD-ICG-L01-LGS-01 TABLE HOIST" ;
+    brick:hasLocation bldg:IRD-ICG-L01 .
+
+bldg:IRD-ICG-L01-PME-03 a brick:Room ;
+    rdfs:label "IRD-ICG-L01-PME-03 AHU 3" ;
+    brick:hasLocation bldg:IRD-ICG-L01 .
+
+bldg:IRD-ICG-L02-LGL-50 a brick:Room ;
+    rdfs:label "IRD-ICG-L02-LGL-50 T2 LIFT LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-L02 .
+
+bldg:IRD-ICG-L02-LGL-55 a brick:Room ;
+    rdfs:label "IRD-ICG-L02-LGL-55 T3 LIFT LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-L02 .
+
+bldg:IRD-ICG-L02-PRG-01 a brick:Room ;
+    rdfs:label "IRD-ICG-L02-PRG-01" ;
+    brick:hasLocation bldg:IRD-ICG-L02 .
+
+bldg:IRD-ICG-L03 a brick:Floor ;
+    rdfs:label "ICG-L03" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-L04 a brick:Floor ;
+    rdfs:label "ICG-L04" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-L04M a brick:Floor ;
+    rdfs:label "ICG-L04M" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-L05-LGL-100 a brick:Room ;
+    rdfs:label "IRD-ICG-L05-LGL-100 TOWER 1 LIFT LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-L05 .
+
+bldg:IRD-ICG-L05-LGL-101 a brick:Room ;
+    rdfs:label "IRD-ICG-L05-LGL-101 TOWER 1 LIFT LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-L05 .
+
+bldg:IRD-ICG-L05-LGL-120 a brick:Room ;
+    rdfs:label "IRD-ICG-L05-LGL-120 TOWER 2 LIFT LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-L05 .
+
+bldg:IRD-ICG-L05-LGL-127 a brick:Room ;
+    rdfs:label "IRD-ICG-L05-LGL-127 TOWER 3 LIFT LOBBY" ;
+    brick:hasLocation bldg:IRD-ICG-L05 .
+
+bldg:IRD-ICG-L05-LGS-07 a brick:Room ;
+    rdfs:label "IRD-ICG-L05-LGS-07 TABLE HOIST" ;
+    brick:hasLocation bldg:IRD-ICG-L05 .
+
+bldg:IRD-ICG-L05M-LGS-07 a brick:Room ;
+    rdfs:label "IRD-ICG-L05M-LGS-07 TABLE HOIST" ;
+    brick:hasLocation bldg:IRD-ICG-L05M .
+
+bldg:IRD-ICG-L05M-PIC-01 a brick:Room ;
+    rdfs:label "IRD-ICG-L05M-PIC-01 GAMING COMMS" ;
+    brick:hasLocation bldg:IRD-ICG-L05M .
+
+bldg:IRD-ICG-L05M-PIC-02 a brick:Room ;
+    rdfs:label "IRD-ICG-L05M-PIC-02 GAMING COMMS" ;
+    brick:hasLocation bldg:IRD-ICG-L05M .
+
+bldg:IRD-ICG-L06-LGS-07 a brick:Room ;
+    rdfs:label "IRD-ICG-L06-LGS-07 TABLE HOIST" ;
+    brick:hasLocation bldg:IRD-ICG-L06 .
+
+bldg:IRD-ICG-L06M-LGS-07 a brick:Room ;
+    rdfs:label "IRD-ICG-L06M-LGS-07 TABLE HOIST" ;
+    brick:hasLocation bldg:IRD-ICG-L06M .
+
+bldg:IRD-ICG-L07 a brick:Floor ;
+    rdfs:label "ICG-L07" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-L07M a brick:Floor ;
+    rdfs:label "ICG-L07M" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ISD-L18 a brick:Floor ;
+    rdfs:label "ISD-L18" ;
+    brick:hasLocation bldg:ISD .
+
+bldg:IRD-ISD-L19 a brick:Floor ;
+    rdfs:label "ISD-L19" ;
+    brick:hasLocation bldg:ISD .
+
+bldg:IRD-ISD-L20 a brick:Floor ;
+    rdfs:label "ISD-L20" ;
+    brick:hasLocation bldg:ISD .
+
+bldg:IRD-ISD-L21 a brick:Floor ;
+    rdfs:label "ISD-L21" ;
+    brick:hasLocation bldg:ISD .
+
+bldg:IRD-ISD-L23M a brick:Floor ;
+    rdfs:label "ISD-L23M" ;
+    brick:hasLocation bldg:ISD .
+
+bldg:IRD-ISD-L24 a brick:Floor ;
+    rdfs:label "ISD-L24" ;
+    brick:hasLocation bldg:ISD .
+
+bldg:IRD-ISD-LS a brick:Floor ;
+    rdfs:label "ISD-LS" ;
+    brick:hasLocation bldg:ISD .
+
+bldg:IRD-IT1-L08 a brick:Floor ;
+    rdfs:label "IT1-L08" ;
+    brick:hasLocation bldg:IT1 .
+
+bldg:IRD-IT1-L09 a brick:Floor ;
+    rdfs:label "IT1-L09" ;
+    brick:hasLocation bldg:IT1 .
+
+bldg:IRD-IT1-L10 a brick:Floor ;
+    rdfs:label "IT1-L10" ;
+    brick:hasLocation bldg:IT1 .
+
+bldg:IRD-IT1-L11 a brick:Floor ;
+    rdfs:label "IT1-L11" ;
+    brick:hasLocation bldg:IT1 .
+
+bldg:IRD-IT1-L12 a brick:Floor ;
+    rdfs:label "IT1-L12" ;
+    brick:hasLocation bldg:IT1 .
+
+bldg:IRD-IT1-L13 a brick:Floor ;
+    rdfs:label "IT1-L13" ;
+    brick:hasLocation bldg:IT1 .
+
+bldg:IT2 a brick:Building ;
+    rdfs:label "Tower 2" ;
+    brick:hasLocation bldg:IRD .
+
+bldg:IT3 a brick:Building ;
+    rdfs:label "Tower 3" ;
+    brick:hasLocation bldg:IRD .
+
+bldg:IT4 a brick:Building ;
+    rdfs:label "Tower 4" ;
+    brick:hasLocation bldg:IRD .
+
+bldg:IRD-ICG-B03 a brick:Floor ;
+    rdfs:label "ICG-B03" ;
+    brick:hasLocation bldg:ICG-Basement .
+
+bldg:IRD-ICG-B05 a brick:Floor ;
+    rdfs:label "ICG-B05" ;
+    brick:hasLocation bldg:ICG-Basement .
+
+bldg:IRD-ICG-L06 a brick:Floor ;
+    rdfs:label "ICG-L06" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-L06M a brick:Floor ;
+    rdfs:label "ICG-L06M" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-B04 a brick:Floor ;
+    rdfs:label "ICG-B04" ;
+    brick:hasLocation bldg:ICG-Basement .
+
+bldg:IRD-ICG-L00 a brick:Floor ;
+    rdfs:label "ICG-L00" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-L01 a brick:Floor ;
+    rdfs:label "ICG-L01" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-L02 a brick:Floor ;
+    rdfs:label "ICG-L02" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-L05M a brick:Floor ;
+    rdfs:label "ICG-L05M" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:IRD-ICG-L05 a brick:Floor ;
+    rdfs:label "ICG-L05" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:ICG-Basement a brick:Building ;
+    rdfs:label "ICG-Basement" ;
+    brick:hasLocation bldg:IRD .
+
+bldg:IT1 a brick:Building ;
+    rdfs:label "Tower 1" ;
+    brick:hasLocation bldg:IRD .
+
+bldg:IRD a brick:Site ;
+    rdfs:label "Queen's Wharf Brisbane IRD" .
+
+bldg:ISD a brick:Building ;
+    rdfs:label "Skydeck" ;
+    brick:hasLocation bldg:IRD .
+
+bldg:IRD-ICG-B01 a brick:Floor ;
+    rdfs:label "ICG-B01" ;
+    brick:hasLocation bldg:ICG-Basement .
+
+bldg:ICG-Podium a brick:Building ;
+    rdfs:label "ICG-Podium" ;
+    brick:hasLocation bldg:IRD .
+
