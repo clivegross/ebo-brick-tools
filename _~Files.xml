@@ -111,4 +111,20 @@
       <DetailImageType>Device</DetailImageType>
     </Properties>
   </File>
+  <File FileId="-10">
+    <Properties>
+      <Name>.gitignore</Name>
+      <VersionNumber>1</VersionNumber>
+      <IsVersioned>True</IsVersioned>
+      <OriginalModifiedLocalUct>
+        <Ticks>638246383453995848</Ticks>
+        <Date>11/07/2023 2:12:25 AM</Date>
+      </OriginalModifiedLocalUct>
+      <PropertiesChanged>True</PropertiesChanged>
+      <FileStatus>NewFile</FileStatus>
+      <DetailImageDisplayWidth>1</DetailImageDisplayWidth>
+      <DetailImageDisplayHeight>1</DetailImageDisplayHeight>
+      <DetailImageType>Device</DetailImageType>
+    </Properties>
+  </File>
 </Files>
