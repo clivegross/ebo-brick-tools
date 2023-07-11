@@ -26,6 +26,10 @@ operations:
       - |
         '{rdf_type}' == "brick:Computer_Room_Air_Conditioning"
     data: |-
+      bldg:{Id}_FanFailure rdfs:label "Fan Failure" ;
+        rdf:type "brick:Unit_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Fan Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
       bldg:{Id}_SaTmpSp rdfs:label "Supply Air Temperature Setpoint" ;
         rdf:type "brick:Supply_Air_Temperature_Setpoint" ;
         brick:hasUnit "unit:DEG_C" ;
@@ -46,6 +50,9 @@ operations:
         brick:hasUnit "unit:PERCENT_RH" ;
         nsp:hasPath "{EBO_path}/{Id}/Setpoints/RaRhSp//Value" ;
         brick:isPointOf bldg:{Id} .
+      bldg:{Id}_FanSts rdfs:label "Fan Run Status" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/FanSts//Value" ;
+        brick:isPointOf bldg:{Id} .
       bldg:{Id}_FanSpd rdfs:label "Fan Speed Status" ;
         rdf:type "brick:Speed_Status" ;
         brick:hasUnit "unit:PERCENT" ;
@@ -56,17 +63,17 @@ operations:
         brick:hasUnit "unit:PERCENT" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/ChwVlv//Value" ;
         brick:isPointOf bldg:{Id} .
-      bldg:{Id}_VoltsA rdfs:label "Voltage Sensor" ;
+      bldg:{Id}_VoltsA rdfs:label "Phase A Voltage" ;
         rdf:type "brick:Voltage_Sensor" ;
         brick:hasUnit "unit:VOLT" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/VoltsA//Value" ;
         brick:isPointOf bldg:{Id} .
-      bldg:{Id}_VoltsB rdfs:label "Voltage Sensor" ;
+      bldg:{Id}_VoltsB rdfs:label "Phase B Voltage" ;
         rdf:type "brick:Voltage_Sensor" ;
         brick:hasUnit "unit:VOLT" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/VoltsB//Value" ;
         brick:isPointOf bldg:{Id} .
-      bldg:{Id}_VoltsC rdfs:label "Voltage Sensor" ;
+      bldg:{Id}_VoltsC rdfs:label "Phase C Voltage" ;
         rdf:type "brick:Voltage_Sensor" ;
         brick:hasUnit "unit:VOLT" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/VoltsC//Value" ;
@@ -76,12 +83,12 @@ operations:
         brick:hasUnit "unit:HZ" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/PowerFreq//Value" ;
         brick:isPointOf bldg:{Id} .
-      bldg:{Id}_SaTmp1 rdfs:label "Supply Air Temperature Sensor" ;
+      bldg:{Id}_SaTmp1 rdfs:label "Supply Air Temperature Sensor 1" ;
         rdf:type "brick:Supply_Air_Temperature_Sensor" ;
         brick:hasUnit "unit:DEG_C" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/SaTmp1//Value" ;
         brick:isPointOf bldg:{Id} .
-      bldg:{Id}_SaTmp2 rdfs:label "Supply Air Temperature Sensor" ;
+      bldg:{Id}_SaTmp2 rdfs:label "Supply Air Temperature Sensor 2" ;
         rdf:type "brick:Supply_Air_Temperature_Sensor" ;
         brick:hasUnit "unit:DEG_C" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/SaTmp2//Value" ;
@@ -141,10 +148,6 @@ operations:
       bldg:{Id}_HumidifierFailure rdfs:label "Humidifier Failure" ;
         rdf:type "brick:Unit_Failure_Alarm" ;
         nsp:hasPath "{EBO_path}/{Id}/Alarms/Humidifier Failure//AlarmState" ;
-        brick:isPointOf bldg:{Id} .
-      bldg:{Id}_FanFailure rdfs:label "Fan Failure" ;
-        rdf:type "brick:Unit_Failure_Alarm" ;
-        nsp:hasPath "{EBO_path}/{Id}/Alarms/Fan Failure//AlarmState" ;
         brick:isPointOf bldg:{Id} .
       bldg:{Id}_FanMaintenance rdfs:label "Fan Maintenance" ;
         rdf:type "brick:Maintenance_Required_Alarm" ;

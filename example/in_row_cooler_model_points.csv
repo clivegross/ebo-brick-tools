@@ -1,16 +1,18 @@
 ﻿bldg,rdfs:label,rdf:type,equipment_rdf:type,brick:hasLocation,brick:hasUnit,nsp:hasPath
+_FanFailure,Fan Failure,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Fan Failure//AlarmState
 _SaTmpSp,Supply Air Temperature Setpoint,brick:Supply_Air_Temperature_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/SaTmpSp//Value
 _ZnTmpSp,Zone Air Temperature Setpoint,brick:Zone_Air_Humidity_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/ZnTmpSp//Value
 _RaTmpSp,Return Air Temperature Setpoint,brick:Return_Air_Temperature_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/RaTmpSp//Value
 _RaRhSp,Return Air Humidity Setpoint,brick:Return_Air_Humidity_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:PERCENT_RH,{EBO_path}/{Id}/Setpoints/RaRhSp//Value
+_FanSts,Fan Run Status,,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Variables/FanSts//Value
 _FanSpd,Fan Speed Status,brick:Speed_Status,brick:Computer_Room_Air_Conditioning,,unit:PERCENT,{EBO_path}/{Id}/Variables/FanSpd//Value
 _ChwVlv,Chilled Water Valve,brick:Chilled_Water_Valve,brick:Computer_Room_Air_Conditioning,,unit:PERCENT,{EBO_path}/{Id}/Variables/ChwVlv//Value
-_VoltsA,Voltage Sensor,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsA//Value
-_VoltsB,Voltage Sensor,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsB//Value
-_VoltsC,Voltage Sensor,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsC//Value
+_VoltsA,Phase A Voltage,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsA//Value
+_VoltsB,Phase B Voltage,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsB//Value
+_VoltsC,Phase C Voltage,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsC//Value
 _PowerFreq,Power Frequency,brick:Frequency_Sensor,brick:Computer_Room_Air_Conditioning,,unit:HZ,{EBO_path}/{Id}/Variables/PowerFreq//Value
-_SaTmp1,Supply Air Temperature Sensor,brick:Supply_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/SaTmp1//Value
-_SaTmp2,Supply Air Temperature Sensor,brick:Supply_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/SaTmp2//Value
+_SaTmp1,Supply Air Temperature Sensor 1,brick:Supply_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/SaTmp1//Value
+_SaTmp2,Supply Air Temperature Sensor 2,brick:Supply_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/SaTmp2//Value
 _RaTmp,Return Air Temperature Sensor,brick:Return_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/RaTmp//Value
 _RaRh,Return Air Humidity Sensor,brick:Return_Air_Humidity_Sensor,brick:Computer_Room_Air_Conditioning,,unit:PERCENT_RH,{EBO_path}/{Id}/Variables/RaRh//Value
 _ZnTmp,Zone Air Temperature Sensor,brick:Zone_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,IRD-ICG-L05M-PIC-02,unit:DEG_C,{EBO_path}/{Id}/Variables/ZnTmp//Value
@@ -23,7 +25,6 @@ _WaterUnderfloorAlarm,Water Underfloor Alarm,brick:Liquid_Detection_Alarm,brick:
 _CondensateWaterOverflowAlarm,Condensate Water Overflow Alarm,brick:Water_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Condensate Water Overflow Alarm//AlarmState
 _HeaterFailure,Heater Failure,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Heater Failure//AlarmState
 _HumidifierFailure,Humidifier Failure,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Humidifier Failure//AlarmState
-_FanFailure,Fan Failure,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Fan Failure//AlarmState
 _FanMaintenance,Fan Maintenance,brick:Maintenance_Required_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Fan Maintenance//AlarmState
 _AirFilterClogged,Air Filter Clogged,brick:Filter_Status,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Air Filter Clogged//AlarmState
 _AirFilterMaintenance,Air Filter Maintenance,brick:Maintenance_Required_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Air Filter Maintenance//AlarmState

@@ -128,6 +128,10 @@ bldg:T1-L00-DC1-IRC-A1_FanSpd a "brick:Speed_Status" ;
     brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/FanSpd//Value" .
 
+bldg:T1-L00-DC1-IRC-A1_FanSts rdfs:label "Fan Run Status" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/FanSts//Value" .
+
 bldg:T1-L00-DC1-IRC-A1_HeaterFailure a "brick:Unit_Failure_Alarm" ;
     rdfs:label "Heater Failure" ;
     brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
@@ -329,13 +333,13 @@ bldg:T1-L00-DC1-IRC-A1_SNMPDeviceOffline a "brick:Communication_Loss_Alarm" ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/SNMP Device Offline//AlarmState" .
 
 bldg:T1-L00-DC1-IRC-A1_SaTmp1 a "brick:Supply_Air_Temperature_Sensor" ;
-    rdfs:label "Supply Air Temperature Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor 1" ;
     brick:hasUnit "unit:DEG_C" ;
     brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/SaTmp1//Value" .
 
 bldg:T1-L00-DC1-IRC-A1_SaTmp2 a "brick:Supply_Air_Temperature_Sensor" ;
-    rdfs:label "Supply Air Temperature Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor 2" ;
     brick:hasUnit "unit:DEG_C" ;
     brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/SaTmp2//Value" .
@@ -362,19 +366,19 @@ bldg:T1-L00-DC1-IRC-A1_SupplyTemperatureSensorFailure a "brick:Sensor_Failure_Al
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Supply Temperature Sensor Failure//AlarmState" .
 
 bldg:T1-L00-DC1-IRC-A1_VoltsA a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase A Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/VoltsA//Value" .
 
 bldg:T1-L00-DC1-IRC-A1_VoltsB a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase B Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/VoltsB//Value" .
 
 bldg:T1-L00-DC1-IRC-A1_VoltsC a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase C Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/VoltsC//Value" .
@@ -502,6 +506,10 @@ bldg:T2-L05M-C2-IRC-A1_FanSpd a "brick:Speed_Status" ;
     brick:hasUnit "unit:PERCENT" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/FanSpd//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_FanSts rdfs:label "Fan Run Status" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/FanSts//Value" .
 
 bldg:T2-L05M-C2-IRC-A1_HeaterFailure a "brick:Unit_Failure_Alarm" ;
     rdfs:label "Heater Failure" ;
@@ -704,13 +712,13 @@ bldg:T2-L05M-C2-IRC-A1_SNMPDeviceOffline a "brick:Communication_Loss_Alarm" ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/SNMP Device Offline//AlarmState" .
 
 bldg:T2-L05M-C2-IRC-A1_SaTmp1 a "brick:Supply_Air_Temperature_Sensor" ;
-    rdfs:label "Supply Air Temperature Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor 1" ;
     brick:hasUnit "unit:DEG_C" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/SaTmp1//Value" .
 
 bldg:T2-L05M-C2-IRC-A1_SaTmp2 a "brick:Supply_Air_Temperature_Sensor" ;
-    rdfs:label "Supply Air Temperature Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor 2" ;
     brick:hasUnit "unit:DEG_C" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/SaTmp2//Value" .
@@ -737,19 +745,19 @@ bldg:T2-L05M-C2-IRC-A1_SupplyTemperatureSensorFailure a "brick:Sensor_Failure_Al
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Supply Temperature Sensor Failure//AlarmState" .
 
 bldg:T2-L05M-C2-IRC-A1_VoltsA a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase A Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/VoltsA//Value" .
 
 bldg:T2-L05M-C2-IRC-A1_VoltsB a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase B Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/VoltsB//Value" .
 
 bldg:T2-L05M-C2-IRC-A1_VoltsC a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase C Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/VoltsC//Value" .
@@ -877,6 +885,10 @@ bldg:T2-L05M-C2-IRC-B1_FanSpd a "brick:Speed_Status" ;
     brick:hasUnit "unit:PERCENT" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/FanSpd//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_FanSts rdfs:label "Fan Run Status" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/FanSts//Value" .
 
 bldg:T2-L05M-C2-IRC-B1_HeaterFailure a "brick:Unit_Failure_Alarm" ;
     rdfs:label "Heater Failure" ;
@@ -1079,13 +1091,13 @@ bldg:T2-L05M-C2-IRC-B1_SNMPDeviceOffline a "brick:Communication_Loss_Alarm" ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/SNMP Device Offline//AlarmState" .
 
 bldg:T2-L05M-C2-IRC-B1_SaTmp1 a "brick:Supply_Air_Temperature_Sensor" ;
-    rdfs:label "Supply Air Temperature Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor 1" ;
     brick:hasUnit "unit:DEG_C" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/SaTmp1//Value" .
 
 bldg:T2-L05M-C2-IRC-B1_SaTmp2 a "brick:Supply_Air_Temperature_Sensor" ;
-    rdfs:label "Supply Air Temperature Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor 2" ;
     brick:hasUnit "unit:DEG_C" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/SaTmp2//Value" .
@@ -1112,19 +1124,19 @@ bldg:T2-L05M-C2-IRC-B1_SupplyTemperatureSensorFailure a "brick:Sensor_Failure_Al
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Supply Temperature Sensor Failure//AlarmState" .
 
 bldg:T2-L05M-C2-IRC-B1_VoltsA a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase A Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/VoltsA//Value" .
 
 bldg:T2-L05M-C2-IRC-B1_VoltsB a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase B Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/VoltsB//Value" .
 
 bldg:T2-L05M-C2-IRC-B1_VoltsC a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase C Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/VoltsC//Value" .
@@ -1252,6 +1264,10 @@ bldg:T3-L05M-C2-IRC-A1_FanSpd a "brick:Speed_Status" ;
     brick:hasUnit "unit:PERCENT" ;
     brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/FanSpd//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_FanSts rdfs:label "Fan Run Status" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/FanSts//Value" .
 
 bldg:T3-L05M-C2-IRC-A1_HeaterFailure a "brick:Unit_Failure_Alarm" ;
     rdfs:label "Heater Failure" ;
@@ -1454,13 +1470,13 @@ bldg:T3-L05M-C2-IRC-A1_SNMPDeviceOffline a "brick:Communication_Loss_Alarm" ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/SNMP Device Offline//AlarmState" .
 
 bldg:T3-L05M-C2-IRC-A1_SaTmp1 a "brick:Supply_Air_Temperature_Sensor" ;
-    rdfs:label "Supply Air Temperature Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor 1" ;
     brick:hasUnit "unit:DEG_C" ;
     brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/SaTmp1//Value" .
 
 bldg:T3-L05M-C2-IRC-A1_SaTmp2 a "brick:Supply_Air_Temperature_Sensor" ;
-    rdfs:label "Supply Air Temperature Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor 2" ;
     brick:hasUnit "unit:DEG_C" ;
     brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/SaTmp2//Value" .
@@ -1487,19 +1503,19 @@ bldg:T3-L05M-C2-IRC-A1_SupplyTemperatureSensorFailure a "brick:Sensor_Failure_Al
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Supply Temperature Sensor Failure//AlarmState" .
 
 bldg:T3-L05M-C2-IRC-A1_VoltsA a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase A Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/VoltsA//Value" .
 
 bldg:T3-L05M-C2-IRC-A1_VoltsB a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase B Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/VoltsB//Value" .
 
 bldg:T3-L05M-C2-IRC-A1_VoltsC a "brick:Voltage_Sensor" ;
-    rdfs:label "Voltage Sensor" ;
+    rdfs:label "Phase C Voltage" ;
     brick:hasUnit "unit:VOLT" ;
     brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
     nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/VoltsC//Value" .
