@@ -1,0 +1,1563 @@
+@prefix bldg: <https://example.com/bldg#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix nsp: <https://w3id.org/se/building/nsp#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+bldg:ICG-L01-AC-Zone-04 a brick:HVAC_Zone ;
+    rdfs:label "ICG-L01-AC-Zone-04" ;
+    brick:hasLocation bldg:IRD-ICG-L01 ;
+    brick:isFedBy bldg:AHU-ICG-L01-04 .
+
+bldg:ICG-L01-AC-Zone-05 a brick:HVAC_Zone ;
+    rdfs:label "ICG-L01-AC-Zone-05" ;
+    brick:hasLocation bldg:IRD-ICG-L01 ;
+    brick:isFedBy bldg:AHU-ICG-L01-05 .
+
+bldg:ICG-L01-Lighting-Zone-01 a brick:Lighting_Zone ;
+    rdfs:label "ICG-L01-Lighting-Zone-01" ;
+    brick:hasLocation bldg:IRD-ICG-L01 .
+
+bldg:ICG-L01-Lighting-Zone-02 a brick:Lighting_Zone ;
+    rdfs:label "ICG-L01-Lighting-Zone-02" ;
+    brick:hasLocation bldg:IRD-ICG-L01 .
+
+bldg:Lift-G1 a brick:Elevator ;
+    rdfs:label "Lift-G1" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:Lift-G2 a brick:Elevator ;
+    rdfs:label "Lift-G2" ;
+    brick:hasLocation bldg:ICG-Podium .
+
+bldg:T1-L00-DC1-IRC-A1_AirFilterClogged a "brick:Filter_Status" ;
+    rdfs:label "Air Filter Clogged" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Air Filter Clogged//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_AirFilterMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Air Filter Maintenance" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Air Filter Maintenance//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_AirFilterPressureDifference a "brick:Pressure_Alarm" ;
+    rdfs:label "Air Filter Pressure Difference" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Air Filter Pressure Difference//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_AirflowTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Airflow Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Airflow Temperature Sensor Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_Available a "brick:Availability_Status" ;
+    rdfs:label "Availability Status" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/reliability/Availability//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_ChilledWaterFlowFailure a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Chilled Water Flow Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Chilled Water Flow Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_ChilledWaterLowFlow a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Chilled Water Low Flow" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Chilled Water Low Flow//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_ChilledWaterPressureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Chilled Water Pressure Sensor Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Chilled Water Pressure Sensor Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_ChilledWaterValveFailure a "brick:Valve_Position_Alarm" ;
+    rdfs:label "Chilled Water Valve Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Chilled Water Valve Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_ChilledWaterValveMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Chilled Water Valve Maintenance" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Chilled Water Valve Maintenance//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_ChwInletTmp a "brick:Chilled_Water_Supply_Temperature_Sensor" ;
+    rdfs:label "Chilled Water Supply Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/ChwInletTmp//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_ChwOutletTmp a "brick:Chilled_Water_Return_Temperature_Sensor" ;
+    rdfs:label "Chilled Water Return Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/ChwOutletTmp//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_ChwVlv a "brick:Chilled_Water_Valve" ;
+    rdfs:label "Chilled Water Valve" ;
+    brick:hasUnit "unit:PERCENT" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/ChwVlv//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_CondensatePumpFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Condensate Pump Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Condensate Pump Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_CondensateWaterOverflowAlarm a "brick:Water_Alarm" ;
+    rdfs:label "Condensate Water Overflow Alarm" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Condensate Water Overflow Alarm//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_DigitalInputSensorCommunication a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Digital Input Sensor Communication" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Digital Input Sensor Communication//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_FanFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Fan Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Fan Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_FanMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Fan Maintenance" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Fan Maintenance//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_FanSpd a "brick:Speed_Status" ;
+    rdfs:label "Fan Speed Status" ;
+    brick:hasUnit "unit:PERCENT" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/FanSpd//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_HeaterFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Heater Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Heater Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_HighRemoteHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Remote Humidity" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/High Remote Humidity//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_HighRemoteTemperature a "brick:Air_Temperature_Alarm" ;
+    rdfs:label "High Remote Temperature" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/High Remote Temperature//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_HighReturnHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Return Humidity" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/High Return Humidity//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_HighReturnTemperature a "brick:High_Return_Air_Temperature_Alarm" ;
+    rdfs:label "High Return Temperature" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/High Return Temperature//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_HighSupplyHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Supply Humidity" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/High Supply Humidity//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_HighSupplyTemperature a "brick:High_Supply_Air_Temperature_Alarm" ;
+    rdfs:label "High Supply Temperature" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/High Supply Temperature//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_HighTemperatureInletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "High Temperature Inlet Chilled Water" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/High Temperature Inlet Chilled Water//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_HighTemperatureOutletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "High Temperature Outlet Chilled Water" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/High Temperature Outlet Chilled Water//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_HumidifierFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Humidifier Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Humidifier Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LossOfMaster a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Loss of Unit Master" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Loss of Unit Master//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LossOfSlave a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Loss of Unit Slave" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Loss of Unit Slave//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LossofAirFlow a "brick:Air_Flow_Loss_Alarm" ;
+    rdfs:label "Loss of Air Flow" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Loss of Air Flow//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LossofWaterFlow a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Loss of Water Flow" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Loss of Water Flow//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LowRemoteHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Remote Humidity" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Low Remote Humidity//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LowRemoteTemperature a "brick:Air_Temperature_Alarm" ;
+    rdfs:label "Low Remote Temperature" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Low Remote Temperature//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LowReturnHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Return Humidity" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Low Return Humidity//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LowReturnTemperature a "brick:Low_Return_Air_Temperature_Alarm" ;
+    rdfs:label "Low Return Temperature" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Low Return Temperature//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LowSupplyHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Supply Humidity" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Low Supply Humidity//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LowSupplyTemperature a "brick:Low_Supply_Air_Temperature_Alarm" ;
+    rdfs:label "Low Supply Temperature" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Low Supply Temperature//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LowTemperatureInletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "Low Temperature Inlet Chilled Water" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Low Temperature Inlet Chilled Water//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_LowTemperatureOutletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "Low Temperature Outlet Chilled Water" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Low Temperature Outlet Chilled Water//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_PowerFreq a "brick:Frequency_Sensor" ;
+    rdfs:label "Power Frequency" ;
+    brick:hasUnit "unit:HZ" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/PowerFreq//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_PowerFrequencyOffset a "brick:Power_Alarm" ;
+    rdfs:label "Power Frequency Offset" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Power Frequency Offset//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_PowerLoss a "brick:Power_Loss_Alarm" ;
+    rdfs:label "Power Loss" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Power Loss//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_PowerOverVoltageAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Over Voltage Alarm" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Power Over Voltage Alarm//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_PowerPhaseLossAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Phase Loss Alarm" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Power Phase Loss Alarm//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_PowerPhaseReverseAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Phase Reverse Alarm" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Power Phase Reverse Alarm//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_PowerUnderVoltageAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Under Voltage Alarm" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Power Under Voltage Alarm//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_RaRh a "brick:Return_Air_Humidity_Sensor" ;
+    rdfs:label "Return Air Humidity Sensor" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/RaRh//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_RaRhSp a "brick:Return_Air_Humidity_Setpoint" ;
+    rdfs:label "Return Air Humidity Setpoint" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Setpoints/RaRhSp//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_RaTmp a "brick:Return_Air_Temperature_Sensor" ;
+    rdfs:label "Return Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/RaTmp//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_RaTmpSp a "brick:Return_Air_Temperature_Setpoint" ;
+    rdfs:label "Return Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Setpoints/RaTmpSp//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_RemoteHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Remote Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Remote Humidity Sensor Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_RemoteShutdownAlarm a "brick:Overridden_Off_Status" ;
+    rdfs:label "Remote Shutdown Alarm" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Remote Shutdown Alarm//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_RemoteTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Remote Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Remote Temperature Sensor Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_ReturnHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Return Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Return Humidity Sensor Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_ReturnTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Return Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Return Temperature Sensor Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_SNMPDeviceOffline a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "SNMP Device Offline" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/SNMP Device Offline//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_SaTmp1 a "brick:Supply_Air_Temperature_Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/SaTmp1//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_SaTmp2 a "brick:Supply_Air_Temperature_Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/SaTmp2//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_SaTmpSp a "brick:Supply_Air_Temperature_Setpoint" ;
+    rdfs:label "Supply Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Setpoints/SaTmpSp//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_StaticPressureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Static Pressure Sensor Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Static Pressure Sensor Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_SupplyHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Supply Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Supply Humidity Sensor Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_SupplyTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Supply Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Supply Temperature Sensor Failure//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_VoltsA a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/VoltsA//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_VoltsB a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/VoltsB//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_VoltsC a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/VoltsC//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_WaterUnderfloorAlarm a "brick:Liquid_Detection_Alarm" ;
+    rdfs:label "Water Underfloor Alarm" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Alarms/Water Underfloor Alarm//AlarmState" .
+
+bldg:T1-L00-DC1-IRC-A1_ZnRh a "brick:Zone_Air_Humidity_Sensor" ;
+    rdfs:label "Zone Air Humidity Sensor" ;
+    brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/ZnRh//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_ZnTmp a "brick:Zone_Air_Temperature_Sensor" ;
+    rdfs:label "Zone Air Temperature Sensor" ;
+    brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Variables/ZnTmp//Value" .
+
+bldg:T1-L00-DC1-IRC-A1_ZnTmpSp a "brick:Zone_Air_Humidity_Setpoint" ;
+    rdfs:label "Zone Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T1-L00-DC1-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T1-L00-DC1/T1-L00-DC1-IRC-A1/Setpoints/ZnTmpSp//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_AirFilterClogged a "brick:Filter_Status" ;
+    rdfs:label "Air Filter Clogged" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Air Filter Clogged//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_AirFilterMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Air Filter Maintenance" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Air Filter Maintenance//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_AirFilterPressureDifference a "brick:Pressure_Alarm" ;
+    rdfs:label "Air Filter Pressure Difference" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Air Filter Pressure Difference//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_AirflowTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Airflow Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Airflow Temperature Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_Available a "brick:Availability_Status" ;
+    rdfs:label "Availability Status" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/reliability/Availability//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_ChilledWaterFlowFailure a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Chilled Water Flow Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Chilled Water Flow Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_ChilledWaterLowFlow a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Chilled Water Low Flow" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Chilled Water Low Flow//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_ChilledWaterPressureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Chilled Water Pressure Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Chilled Water Pressure Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_ChilledWaterValveFailure a "brick:Valve_Position_Alarm" ;
+    rdfs:label "Chilled Water Valve Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Chilled Water Valve Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_ChilledWaterValveMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Chilled Water Valve Maintenance" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Chilled Water Valve Maintenance//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_ChwInletTmp a "brick:Chilled_Water_Supply_Temperature_Sensor" ;
+    rdfs:label "Chilled Water Supply Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/ChwInletTmp//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_ChwOutletTmp a "brick:Chilled_Water_Return_Temperature_Sensor" ;
+    rdfs:label "Chilled Water Return Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/ChwOutletTmp//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_ChwVlv a "brick:Chilled_Water_Valve" ;
+    rdfs:label "Chilled Water Valve" ;
+    brick:hasUnit "unit:PERCENT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/ChwVlv//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_CondensatePumpFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Condensate Pump Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Condensate Pump Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_CondensateWaterOverflowAlarm a "brick:Water_Alarm" ;
+    rdfs:label "Condensate Water Overflow Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Condensate Water Overflow Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_DigitalInputSensorCommunication a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Digital Input Sensor Communication" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Digital Input Sensor Communication//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_FanFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Fan Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Fan Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_FanMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Fan Maintenance" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Fan Maintenance//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_FanSpd a "brick:Speed_Status" ;
+    rdfs:label "Fan Speed Status" ;
+    brick:hasUnit "unit:PERCENT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/FanSpd//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_HeaterFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Heater Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Heater Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_HighRemoteHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Remote Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/High Remote Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_HighRemoteTemperature a "brick:Air_Temperature_Alarm" ;
+    rdfs:label "High Remote Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/High Remote Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_HighReturnHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Return Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/High Return Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_HighReturnTemperature a "brick:High_Return_Air_Temperature_Alarm" ;
+    rdfs:label "High Return Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/High Return Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_HighSupplyHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Supply Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/High Supply Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_HighSupplyTemperature a "brick:High_Supply_Air_Temperature_Alarm" ;
+    rdfs:label "High Supply Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/High Supply Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_HighTemperatureInletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "High Temperature Inlet Chilled Water" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/High Temperature Inlet Chilled Water//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_HighTemperatureOutletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "High Temperature Outlet Chilled Water" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/High Temperature Outlet Chilled Water//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_HumidifierFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Humidifier Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Humidifier Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LossOfMaster a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Loss of Unit Master" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Loss of Unit Master//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LossOfSlave a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Loss of Unit Slave" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Loss of Unit Slave//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LossofAirFlow a "brick:Air_Flow_Loss_Alarm" ;
+    rdfs:label "Loss of Air Flow" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Loss of Air Flow//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LossofWaterFlow a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Loss of Water Flow" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Loss of Water Flow//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LowRemoteHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Remote Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Low Remote Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LowRemoteTemperature a "brick:Air_Temperature_Alarm" ;
+    rdfs:label "Low Remote Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Low Remote Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LowReturnHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Return Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Low Return Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LowReturnTemperature a "brick:Low_Return_Air_Temperature_Alarm" ;
+    rdfs:label "Low Return Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Low Return Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LowSupplyHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Supply Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Low Supply Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LowSupplyTemperature a "brick:Low_Supply_Air_Temperature_Alarm" ;
+    rdfs:label "Low Supply Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Low Supply Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LowTemperatureInletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "Low Temperature Inlet Chilled Water" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Low Temperature Inlet Chilled Water//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_LowTemperatureOutletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "Low Temperature Outlet Chilled Water" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Low Temperature Outlet Chilled Water//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_PowerFreq a "brick:Frequency_Sensor" ;
+    rdfs:label "Power Frequency" ;
+    brick:hasUnit "unit:HZ" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/PowerFreq//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_PowerFrequencyOffset a "brick:Power_Alarm" ;
+    rdfs:label "Power Frequency Offset" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Power Frequency Offset//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_PowerLoss a "brick:Power_Loss_Alarm" ;
+    rdfs:label "Power Loss" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Power Loss//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_PowerOverVoltageAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Over Voltage Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Power Over Voltage Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_PowerPhaseLossAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Phase Loss Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Power Phase Loss Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_PowerPhaseReverseAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Phase Reverse Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Power Phase Reverse Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_PowerUnderVoltageAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Under Voltage Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Power Under Voltage Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_RaRh a "brick:Return_Air_Humidity_Sensor" ;
+    rdfs:label "Return Air Humidity Sensor" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/RaRh//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_RaRhSp a "brick:Return_Air_Humidity_Setpoint" ;
+    rdfs:label "Return Air Humidity Setpoint" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Setpoints/RaRhSp//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_RaTmp a "brick:Return_Air_Temperature_Sensor" ;
+    rdfs:label "Return Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/RaTmp//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_RaTmpSp a "brick:Return_Air_Temperature_Setpoint" ;
+    rdfs:label "Return Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Setpoints/RaTmpSp//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_RemoteHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Remote Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Remote Humidity Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_RemoteShutdownAlarm a "brick:Overridden_Off_Status" ;
+    rdfs:label "Remote Shutdown Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Remote Shutdown Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_RemoteTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Remote Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Remote Temperature Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_ReturnHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Return Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Return Humidity Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_ReturnTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Return Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Return Temperature Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_SNMPDeviceOffline a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "SNMP Device Offline" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/SNMP Device Offline//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_SaTmp1 a "brick:Supply_Air_Temperature_Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/SaTmp1//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_SaTmp2 a "brick:Supply_Air_Temperature_Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/SaTmp2//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_SaTmpSp a "brick:Supply_Air_Temperature_Setpoint" ;
+    rdfs:label "Supply Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Setpoints/SaTmpSp//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_StaticPressureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Static Pressure Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Static Pressure Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_SupplyHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Supply Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Supply Humidity Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_SupplyTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Supply Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Supply Temperature Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_VoltsA a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/VoltsA//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_VoltsB a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/VoltsB//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_VoltsC a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/VoltsC//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_WaterUnderfloorAlarm a "brick:Liquid_Detection_Alarm" ;
+    rdfs:label "Water Underfloor Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Alarms/Water Underfloor Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-A1_ZnRh a "brick:Zone_Air_Humidity_Sensor" ;
+    rdfs:label "Zone Air Humidity Sensor" ;
+    brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/ZnRh//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_ZnTmp a "brick:Zone_Air_Temperature_Sensor" ;
+    rdfs:label "Zone Air Temperature Sensor" ;
+    brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Variables/ZnTmp//Value" .
+
+bldg:T2-L05M-C2-IRC-A1_ZnTmpSp a "brick:Zone_Air_Humidity_Setpoint" ;
+    rdfs:label "Zone Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-A1/Setpoints/ZnTmpSp//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_AirFilterClogged a "brick:Filter_Status" ;
+    rdfs:label "Air Filter Clogged" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Air Filter Clogged//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_AirFilterMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Air Filter Maintenance" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Air Filter Maintenance//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_AirFilterPressureDifference a "brick:Pressure_Alarm" ;
+    rdfs:label "Air Filter Pressure Difference" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Air Filter Pressure Difference//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_AirflowTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Airflow Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Airflow Temperature Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_Available a "brick:Availability_Status" ;
+    rdfs:label "Availability Status" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/reliability/Availability//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_ChilledWaterFlowFailure a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Chilled Water Flow Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Chilled Water Flow Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_ChilledWaterLowFlow a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Chilled Water Low Flow" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Chilled Water Low Flow//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_ChilledWaterPressureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Chilled Water Pressure Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Chilled Water Pressure Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_ChilledWaterValveFailure a "brick:Valve_Position_Alarm" ;
+    rdfs:label "Chilled Water Valve Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Chilled Water Valve Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_ChilledWaterValveMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Chilled Water Valve Maintenance" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Chilled Water Valve Maintenance//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_ChwInletTmp a "brick:Chilled_Water_Supply_Temperature_Sensor" ;
+    rdfs:label "Chilled Water Supply Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/ChwInletTmp//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_ChwOutletTmp a "brick:Chilled_Water_Return_Temperature_Sensor" ;
+    rdfs:label "Chilled Water Return Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/ChwOutletTmp//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_ChwVlv a "brick:Chilled_Water_Valve" ;
+    rdfs:label "Chilled Water Valve" ;
+    brick:hasUnit "unit:PERCENT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/ChwVlv//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_CondensatePumpFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Condensate Pump Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Condensate Pump Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_CondensateWaterOverflowAlarm a "brick:Water_Alarm" ;
+    rdfs:label "Condensate Water Overflow Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Condensate Water Overflow Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_DigitalInputSensorCommunication a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Digital Input Sensor Communication" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Digital Input Sensor Communication//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_FanFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Fan Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Fan Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_FanMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Fan Maintenance" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Fan Maintenance//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_FanSpd a "brick:Speed_Status" ;
+    rdfs:label "Fan Speed Status" ;
+    brick:hasUnit "unit:PERCENT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/FanSpd//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_HeaterFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Heater Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Heater Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_HighRemoteHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Remote Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/High Remote Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_HighRemoteTemperature a "brick:Air_Temperature_Alarm" ;
+    rdfs:label "High Remote Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/High Remote Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_HighReturnHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Return Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/High Return Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_HighReturnTemperature a "brick:High_Return_Air_Temperature_Alarm" ;
+    rdfs:label "High Return Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/High Return Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_HighSupplyHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Supply Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/High Supply Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_HighSupplyTemperature a "brick:High_Supply_Air_Temperature_Alarm" ;
+    rdfs:label "High Supply Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/High Supply Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_HighTemperatureInletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "High Temperature Inlet Chilled Water" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/High Temperature Inlet Chilled Water//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_HighTemperatureOutletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "High Temperature Outlet Chilled Water" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/High Temperature Outlet Chilled Water//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_HumidifierFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Humidifier Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Humidifier Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LossOfMaster a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Loss of Unit Master" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Loss of Unit Master//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LossOfSlave a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Loss of Unit Slave" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Loss of Unit Slave//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LossofAirFlow a "brick:Air_Flow_Loss_Alarm" ;
+    rdfs:label "Loss of Air Flow" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Loss of Air Flow//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LossofWaterFlow a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Loss of Water Flow" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Loss of Water Flow//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LowRemoteHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Remote Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Low Remote Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LowRemoteTemperature a "brick:Air_Temperature_Alarm" ;
+    rdfs:label "Low Remote Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Low Remote Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LowReturnHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Return Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Low Return Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LowReturnTemperature a "brick:Low_Return_Air_Temperature_Alarm" ;
+    rdfs:label "Low Return Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Low Return Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LowSupplyHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Supply Humidity" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Low Supply Humidity//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LowSupplyTemperature a "brick:Low_Supply_Air_Temperature_Alarm" ;
+    rdfs:label "Low Supply Temperature" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Low Supply Temperature//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LowTemperatureInletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "Low Temperature Inlet Chilled Water" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Low Temperature Inlet Chilled Water//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_LowTemperatureOutletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "Low Temperature Outlet Chilled Water" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Low Temperature Outlet Chilled Water//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_PowerFreq a "brick:Frequency_Sensor" ;
+    rdfs:label "Power Frequency" ;
+    brick:hasUnit "unit:HZ" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/PowerFreq//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_PowerFrequencyOffset a "brick:Power_Alarm" ;
+    rdfs:label "Power Frequency Offset" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Power Frequency Offset//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_PowerLoss a "brick:Power_Loss_Alarm" ;
+    rdfs:label "Power Loss" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Power Loss//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_PowerOverVoltageAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Over Voltage Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Power Over Voltage Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_PowerPhaseLossAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Phase Loss Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Power Phase Loss Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_PowerPhaseReverseAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Phase Reverse Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Power Phase Reverse Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_PowerUnderVoltageAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Under Voltage Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Power Under Voltage Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_RaRh a "brick:Return_Air_Humidity_Sensor" ;
+    rdfs:label "Return Air Humidity Sensor" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/RaRh//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_RaRhSp a "brick:Return_Air_Humidity_Setpoint" ;
+    rdfs:label "Return Air Humidity Setpoint" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Setpoints/RaRhSp//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_RaTmp a "brick:Return_Air_Temperature_Sensor" ;
+    rdfs:label "Return Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/RaTmp//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_RaTmpSp a "brick:Return_Air_Temperature_Setpoint" ;
+    rdfs:label "Return Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Setpoints/RaTmpSp//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_RemoteHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Remote Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Remote Humidity Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_RemoteShutdownAlarm a "brick:Overridden_Off_Status" ;
+    rdfs:label "Remote Shutdown Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Remote Shutdown Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_RemoteTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Remote Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Remote Temperature Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_ReturnHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Return Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Return Humidity Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_ReturnTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Return Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Return Temperature Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_SNMPDeviceOffline a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "SNMP Device Offline" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/SNMP Device Offline//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_SaTmp1 a "brick:Supply_Air_Temperature_Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/SaTmp1//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_SaTmp2 a "brick:Supply_Air_Temperature_Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/SaTmp2//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_SaTmpSp a "brick:Supply_Air_Temperature_Setpoint" ;
+    rdfs:label "Supply Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Setpoints/SaTmpSp//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_StaticPressureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Static Pressure Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Static Pressure Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_SupplyHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Supply Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Supply Humidity Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_SupplyTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Supply Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Supply Temperature Sensor Failure//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_VoltsA a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/VoltsA//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_VoltsB a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/VoltsB//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_VoltsC a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/VoltsC//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_WaterUnderfloorAlarm a "brick:Liquid_Detection_Alarm" ;
+    rdfs:label "Water Underfloor Alarm" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Alarms/Water Underfloor Alarm//AlarmState" .
+
+bldg:T2-L05M-C2-IRC-B1_ZnRh a "brick:Zone_Air_Humidity_Sensor" ;
+    rdfs:label "Zone Air Humidity Sensor" ;
+    brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/ZnRh//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_ZnTmp a "brick:Zone_Air_Temperature_Sensor" ;
+    rdfs:label "Zone Air Temperature Sensor" ;
+    brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Variables/ZnTmp//Value" .
+
+bldg:T2-L05M-C2-IRC-B1_ZnTmpSp a "brick:Zone_Air_Humidity_Setpoint" ;
+    rdfs:label "Zone Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T2-L05M-C2-IRC-B1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T2-L05M-C2/T2-L05M-C2-IRC-B1/Setpoints/ZnTmpSp//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_AirFilterClogged a "brick:Filter_Status" ;
+    rdfs:label "Air Filter Clogged" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Air Filter Clogged//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_AirFilterMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Air Filter Maintenance" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Air Filter Maintenance//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_AirFilterPressureDifference a "brick:Pressure_Alarm" ;
+    rdfs:label "Air Filter Pressure Difference" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Air Filter Pressure Difference//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_AirflowTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Airflow Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Airflow Temperature Sensor Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_Available a "brick:Availability_Status" ;
+    rdfs:label "Availability Status" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/reliability/Availability//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_ChilledWaterFlowFailure a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Chilled Water Flow Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Chilled Water Flow Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_ChilledWaterLowFlow a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Chilled Water Low Flow" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Chilled Water Low Flow//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_ChilledWaterPressureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Chilled Water Pressure Sensor Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Chilled Water Pressure Sensor Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_ChilledWaterValveFailure a "brick:Valve_Position_Alarm" ;
+    rdfs:label "Chilled Water Valve Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Chilled Water Valve Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_ChilledWaterValveMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Chilled Water Valve Maintenance" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Chilled Water Valve Maintenance//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_ChwInletTmp a "brick:Chilled_Water_Supply_Temperature_Sensor" ;
+    rdfs:label "Chilled Water Supply Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/ChwInletTmp//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_ChwOutletTmp a "brick:Chilled_Water_Return_Temperature_Sensor" ;
+    rdfs:label "Chilled Water Return Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/ChwOutletTmp//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_ChwVlv a "brick:Chilled_Water_Valve" ;
+    rdfs:label "Chilled Water Valve" ;
+    brick:hasUnit "unit:PERCENT" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/ChwVlv//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_CondensatePumpFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Condensate Pump Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Condensate Pump Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_CondensateWaterOverflowAlarm a "brick:Water_Alarm" ;
+    rdfs:label "Condensate Water Overflow Alarm" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Condensate Water Overflow Alarm//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_DigitalInputSensorCommunication a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Digital Input Sensor Communication" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Digital Input Sensor Communication//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_FanFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Fan Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Fan Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_FanMaintenance a "brick:Maintenance_Required_Alarm" ;
+    rdfs:label "Fan Maintenance" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Fan Maintenance//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_FanSpd a "brick:Speed_Status" ;
+    rdfs:label "Fan Speed Status" ;
+    brick:hasUnit "unit:PERCENT" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/FanSpd//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_HeaterFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Heater Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Heater Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_HighRemoteHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Remote Humidity" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/High Remote Humidity//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_HighRemoteTemperature a "brick:Air_Temperature_Alarm" ;
+    rdfs:label "High Remote Temperature" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/High Remote Temperature//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_HighReturnHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Return Humidity" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/High Return Humidity//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_HighReturnTemperature a "brick:High_Return_Air_Temperature_Alarm" ;
+    rdfs:label "High Return Temperature" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/High Return Temperature//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_HighSupplyHumidity a "brick:High_Humidity_Alarm" ;
+    rdfs:label "High Supply Humidity" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/High Supply Humidity//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_HighSupplyTemperature a "brick:High_Supply_Air_Temperature_Alarm" ;
+    rdfs:label "High Supply Temperature" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/High Supply Temperature//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_HighTemperatureInletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "High Temperature Inlet Chilled Water" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/High Temperature Inlet Chilled Water//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_HighTemperatureOutletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "High Temperature Outlet Chilled Water" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/High Temperature Outlet Chilled Water//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_HumidifierFailure a "brick:Unit_Failure_Alarm" ;
+    rdfs:label "Humidifier Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Humidifier Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LossOfMaster a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Loss of Unit Master" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Loss of Unit Master//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LossOfSlave a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "Loss of Unit Slave" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Loss of Unit Slave//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LossofAirFlow a "brick:Air_Flow_Loss_Alarm" ;
+    rdfs:label "Loss of Air Flow" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Loss of Air Flow//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LossofWaterFlow a "brick:Water_Loss_Alarm" ;
+    rdfs:label "Loss of Water Flow" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Loss of Water Flow//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LowRemoteHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Remote Humidity" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Low Remote Humidity//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LowRemoteTemperature a "brick:Air_Temperature_Alarm" ;
+    rdfs:label "Low Remote Temperature" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Low Remote Temperature//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LowReturnHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Return Humidity" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Low Return Humidity//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LowReturnTemperature a "brick:Low_Return_Air_Temperature_Alarm" ;
+    rdfs:label "Low Return Temperature" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Low Return Temperature//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LowSupplyHumidity a "brick:Low_Humidity_Alarm" ;
+    rdfs:label "Low Supply Humidity" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Low Supply Humidity//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LowSupplyTemperature a "brick:Low_Supply_Air_Temperature_Alarm" ;
+    rdfs:label "Low Supply Temperature" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Low Supply Temperature//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LowTemperatureInletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "Low Temperature Inlet Chilled Water" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Low Temperature Inlet Chilled Water//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_LowTemperatureOutletChilledWater a "brick:Water_Temperature_Alarm" ;
+    rdfs:label "Low Temperature Outlet Chilled Water" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Low Temperature Outlet Chilled Water//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_PowerFreq a "brick:Frequency_Sensor" ;
+    rdfs:label "Power Frequency" ;
+    brick:hasUnit "unit:HZ" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/PowerFreq//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_PowerFrequencyOffset a "brick:Power_Alarm" ;
+    rdfs:label "Power Frequency Offset" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Power Frequency Offset//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_PowerLoss a "brick:Power_Loss_Alarm" ;
+    rdfs:label "Power Loss" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Power Loss//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_PowerOverVoltageAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Over Voltage Alarm" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Power Over Voltage Alarm//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_PowerPhaseLossAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Phase Loss Alarm" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Power Phase Loss Alarm//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_PowerPhaseReverseAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Phase Reverse Alarm" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Power Phase Reverse Alarm//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_PowerUnderVoltageAlarm a "brick:Power_Alarm" ;
+    rdfs:label "Power Under Voltage Alarm" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Power Under Voltage Alarm//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_RaRh a "brick:Return_Air_Humidity_Sensor" ;
+    rdfs:label "Return Air Humidity Sensor" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/RaRh//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_RaRhSp a "brick:Return_Air_Humidity_Setpoint" ;
+    rdfs:label "Return Air Humidity Setpoint" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Setpoints/RaRhSp//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_RaTmp a "brick:Return_Air_Temperature_Sensor" ;
+    rdfs:label "Return Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/RaTmp//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_RaTmpSp a "brick:Return_Air_Temperature_Setpoint" ;
+    rdfs:label "Return Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Setpoints/RaTmpSp//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_RemoteHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Remote Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Remote Humidity Sensor Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_RemoteShutdownAlarm a "brick:Overridden_Off_Status" ;
+    rdfs:label "Remote Shutdown Alarm" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Remote Shutdown Alarm//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_RemoteTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Remote Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Remote Temperature Sensor Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_ReturnHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Return Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Return Humidity Sensor Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_ReturnTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Return Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Return Temperature Sensor Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_SNMPDeviceOffline a "brick:Communication_Loss_Alarm" ;
+    rdfs:label "SNMP Device Offline" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/SNMP Device Offline//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_SaTmp1 a "brick:Supply_Air_Temperature_Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/SaTmp1//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_SaTmp2 a "brick:Supply_Air_Temperature_Sensor" ;
+    rdfs:label "Supply Air Temperature Sensor" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/SaTmp2//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_SaTmpSp a "brick:Supply_Air_Temperature_Setpoint" ;
+    rdfs:label "Supply Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Setpoints/SaTmpSp//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_StaticPressureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Static Pressure Sensor Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Static Pressure Sensor Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_SupplyHumiditySensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Supply Humidity Sensor Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Supply Humidity Sensor Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_SupplyTemperatureSensorFailure a "brick:Sensor_Failure_Alarm" ;
+    rdfs:label "Supply Temperature Sensor Failure" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Supply Temperature Sensor Failure//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_VoltsA a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/VoltsA//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_VoltsB a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/VoltsB//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_VoltsC a "brick:Voltage_Sensor" ;
+    rdfs:label "Voltage Sensor" ;
+    brick:hasUnit "unit:VOLT" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/VoltsC//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_WaterUnderfloorAlarm a "brick:Liquid_Detection_Alarm" ;
+    rdfs:label "Water Underfloor Alarm" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Alarms/Water Underfloor Alarm//AlarmState" .
+
+bldg:T3-L05M-C2-IRC-A1_ZnRh a "brick:Zone_Air_Humidity_Sensor" ;
+    rdfs:label "Zone Air Humidity Sensor" ;
+    brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+    brick:hasUnit "unit:PERCENT_RH" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/ZnRh//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_ZnTmp a "brick:Zone_Air_Temperature_Sensor" ;
+    rdfs:label "Zone Air Temperature Sensor" ;
+    brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Variables/ZnTmp//Value" .
+
+bldg:T3-L05M-C2-IRC-A1_ZnTmpSp a "brick:Zone_Air_Humidity_Setpoint" ;
+    rdfs:label "Zone Air Temperature Setpoint" ;
+    brick:hasUnit "unit:DEG_C" ;
+    brick:isPointOf bldg:T3-L05M-C2-IRC-A1 ;
+    nsp:hasPath "/iBAMS-ES06/Application/Critical Rooms/T3-L05M-C2/T3-L05M-C2-IRC-A1/Setpoints/ZnTmpSp//Value" .
+
+bldg:UCL-ICG-L01-01 a brick:Equipment ;
+    rdfs:label "UCL-ICG-L01-01" ;
+    brick:hasLocation bldg:IRD-ICG-L01-BSR-01 .
+
+bldg:UCL-ICG-L01-02 a brick:Equipment ;
+    rdfs:label "UCL-ICG-L01-02" ;
+    brick:hasLocation bldg:IRD-ICG-L01-BSR-01 .
+
+bldg:AHU-ICG-L01-04 a brick:AHU ;
+    rdfs:label "AHU-ICG-L01-04" ;
+    brick:hasLocation bldg:IRD-ICG-L01-PME-03 .
+
+bldg:AHU-ICG-L01-05 a brick:AHU ;
+    rdfs:label "AHU-ICG-L01-05" ;
+    brick:hasLocation bldg:IRD-ICG-L01-PME-03 .
+
+bldg:T1-L00-DC1-IRC-A1 a brick:Computer_Room_Air_Conditioning ;
+    rdfs:label "T1-L00-DC1-IRC-A1" ;
+    brick:hasLocation bldg:IRD-ICG-L00-PIC-01 .
+
+bldg:T2-L05M-C2-IRC-A1 a brick:Computer_Room_Air_Conditioning ;
+    rdfs:label "T2-L05M-C2-IRC-A1" ;
+    brick:hasLocation bldg:IRD-ICG-L05M-PIC-01 .
+
+bldg:T2-L05M-C2-IRC-B1 a brick:Computer_Room_Air_Conditioning ;
+    rdfs:label "T2-L05M-C2-IRC-B1" ;
+    brick:hasLocation bldg:IRD-ICG-L05M-PIC-01 .
+
+bldg:T3-L05M-C2-IRC-A1 a brick:Computer_Room_Air_Conditioning ;
+    rdfs:label "T3-L05M-C2-IRC-A1" ;
+    brick:hasLocation bldg:IRD-ICG-L05M-PIC-02 .
+

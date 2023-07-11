@@ -13,20 +13,21 @@ import csv
 import yaml
 
 # set the path to the equipment model points csv here:
-csv_file = "in_row_cooler_model_points.csv"
+equipment_model_points_csv_file = "example/in_row_cooler_model_points.csv"
 # set the output config yaml file name here:
-config_yaml_file = "equipment_model_in_row_cooler.yml"
-# this yaml file contains boilerplate header yaml required in most configs
-template_header_yaml_file = "equipment_template_header.yml"
+config_yaml_file = "example/equipment_model_in_row_cooler.yml"
 # Update with the desired equipment rdf:type
 equipment_rdf_type = "brick:Computer_Room_Air_Conditioning"
 
 
-def make_config():
+def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type):
+    # this yaml file contains boilerplate header yaml required in most configs
+    template_header_yaml_file = "equipment_template_header.yml"
+
     data = []
 
     # Read the CSV file and store the data in a list of dictionaries
-    with open(csv_file, "r", encoding="utf-8-sig") as file:
+    with open(equipment_model_points_csv_file, "r", encoding="utf-8-sig") as file:
         reader = csv.DictReader(file)
         for row in reader:
             data.append(row)
@@ -72,4 +73,4 @@ def make_config():
     print(f"Config '{config_yaml_file}' complete. {count} points added.")
 
 if __name__ == '__main__':
-    make_config()
+    make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type)
