@@ -130,7 +130,7 @@ Once the model is imported, confirm it is correct in EBO:
 
 ## TODO
 
-1. Scaffold this out to build model from multiple equipment classes from multiple input files from a single script.
+1. Scaffold this out to build entire Semantic model for multiple equipment classes from multiple input files from a single script.
 1. Automate import model into GraphDB using the [ImportRDF Tool](https://graphdb.ontotext.com/documentation/10.0/loading-data-using-importrdf.html).
 1. Update scripts to easily rebuild model and reimport when source data changes. 
 1. Abstract the functions into classes and build ORM classes to represent the Brick classes (Equipment, Point, Location) for extensibility.
