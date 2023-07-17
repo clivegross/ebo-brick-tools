@@ -8,6 +8,7 @@
 # Author: Clive Gross
 # Last updated: 11-07-2023
 import subprocess
+from utils.fileutils import check_and_convert_utf8
 
 
 def execute_command(command):
@@ -26,8 +27,12 @@ def execute_command(command):
 
 def brickify_command(csv_file, output_file, config_file, input_type="csv"):
     """
+    Run the brickify command to generate the brick model ttl file from input data and config.
+    First check data csv is utf-8, brickify doesnt read other encoded formats such as utf-8 with BOM but also doesnt throw any errors, resulting in an empty model.
+    Excel encodes csv as utf-8 with BOM by default.
     brickify EQUIPMENT_MODEL.csv --output equipment_model.ttl --input-type csv --config equipment_model.yml
     """
+    check_and_convert_utf8(csv_file)
     command = f"brickify {csv_file} --output {output_file} --input-type {input_type} --config {config_file}"
     print(f"Brick model will be written to '{output_file}' if successful.")
     execute_command(command)

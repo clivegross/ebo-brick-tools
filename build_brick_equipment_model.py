@@ -18,6 +18,8 @@ equipment_model_points_csv_file = "example/in_row_cooler_model_points.csv"
 equipment_rdf_type = "brick:Computer_Room_Air_Conditioning"
 # set the path to the equipment data csv here:
 equipment_data_csv_file = "example/in_row_cooler_data.csv"
+# Uncomment this line to convert a UTF-8 with BOM encoded data csv to UTF-8 before running brickify (brickify cant handle non-UTF-8 encoded csv)
+# equipment_data_csv_file = "example/in_row_cooler_data_utf8_bom.csv"
 # set the output ttl filename here:
 output_file = "example/in_row_cooler_model.ttl"
 
