@@ -1,0 +1,335 @@
+---
+namespace_prefixes:
+  brick: "https://brickschema.org/schema/Brick#"
+  ext: "https://example.com/schema/BrickExtension#"
+  unit: "http://qudt.org/vocab/unit/"
+  nsp: "https://w3id.org/se/building/nsp#"
+operations:
+  -
+    data: |-
+      bldg:{Id} rdfs:label "{rdf_label}" ;
+        rdf:type {rdf_type} .
+  - 
+    conditions:
+      - |
+        '{brick_hasLocation}' != ""
+    data: |-
+      bldg:{Id} brick:hasLocation bldg:{brick_hasLocation} .
+  - 
+    conditions:
+      - |
+        '{brick_isFedBy}' != ""
+    data: |-
+      bldg:{Id} brick:isFedBy bldg:{brick_isFedBy} .
+  -
+    conditions:
+      - |
+        '{rdf_type}' == "brick:Computer_Room_Air_Conditioning"
+    data: |-
+      bldg:{Id}_FanFailure rdfs:label "Fan Failure" ;
+        rdf:type "brick:Unit_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Fan Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_SaTmpSp rdfs:label "Supply Air Temperature Setpoint" ;
+        rdf:type "brick:Supply_Air_Temperature_Setpoint" ;
+        brick:hasUnit "unit:DEG_C" ;
+        nsp:hasPath "{EBO_path}/{Id}/Setpoints/SaTmpSp//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ZnTmpSp rdfs:label "Zone Air Temperature Setpoint" ;
+        rdf:type "brick:Zone_Air_Humidity_Setpoint" ;
+        brick:hasUnit "unit:DEG_C" ;
+        nsp:hasPath "{EBO_path}/{Id}/Setpoints/ZnTmpSp//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_RaTmpSp rdfs:label "Return Air Temperature Setpoint" ;
+        rdf:type "brick:Return_Air_Temperature_Setpoint" ;
+        brick:hasUnit "unit:DEG_C" ;
+        nsp:hasPath "{EBO_path}/{Id}/Setpoints/RaTmpSp//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_RaRhSp rdfs:label "Return Air Humidity Setpoint" ;
+        rdf:type "brick:Return_Air_Humidity_Setpoint" ;
+        brick:hasUnit "unit:PERCENT_RH" ;
+        nsp:hasPath "{EBO_path}/{Id}/Setpoints/RaRhSp//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_FanSts rdfs:label "Fan Run Status" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/FanSts//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_FanSpd rdfs:label "Fan Speed Status" ;
+        rdf:type "brick:Speed_Status" ;
+        brick:hasUnit "unit:PERCENT" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/FanSpd//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ChwVlv rdfs:label "Chilled Water Valve" ;
+        rdf:type "brick:Chilled_Water_Valve" ;
+        brick:hasUnit "unit:PERCENT" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/ChwVlv//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_VoltsA rdfs:label "Phase A Voltage" ;
+        rdf:type "brick:Voltage_Sensor" ;
+        brick:hasUnit "unit:VOLT" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/VoltsA//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_VoltsB rdfs:label "Phase B Voltage" ;
+        rdf:type "brick:Voltage_Sensor" ;
+        brick:hasUnit "unit:VOLT" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/VoltsB//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_VoltsC rdfs:label "Phase C Voltage" ;
+        rdf:type "brick:Voltage_Sensor" ;
+        brick:hasUnit "unit:VOLT" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/VoltsC//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_PowerFreq rdfs:label "Power Frequency" ;
+        rdf:type "brick:Frequency_Sensor" ;
+        brick:hasUnit "unit:HZ" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/PowerFreq//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_SaTmp1 rdfs:label "Supply Air Temperature Sensor 1" ;
+        rdf:type "brick:Supply_Air_Temperature_Sensor" ;
+        brick:hasUnit "unit:DEG_C" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/SaTmp1//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_SaTmp2 rdfs:label "Supply Air Temperature Sensor 2" ;
+        rdf:type "brick:Supply_Air_Temperature_Sensor" ;
+        brick:hasUnit "unit:DEG_C" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/SaTmp2//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_RaTmp rdfs:label "Return Air Temperature Sensor" ;
+        rdf:type "brick:Return_Air_Temperature_Sensor" ;
+        brick:hasUnit "unit:DEG_C" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/RaTmp//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_RaRh rdfs:label "Return Air Humidity Sensor" ;
+        rdf:type "brick:Return_Air_Humidity_Sensor" ;
+        brick:hasUnit "unit:PERCENT_RH" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/RaRh//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ZnTmp rdfs:label "Zone Air Temperature Sensor" ;
+        rdf:type "brick:Zone_Air_Temperature_Sensor" ;
+        brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+        brick:hasUnit "unit:DEG_C" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/ZnTmp//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ZnRh rdfs:label "Zone Air Humidity Sensor" ;
+        rdf:type "brick:Zone_Air_Humidity_Sensor" ;
+        brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
+        brick:hasUnit "unit:PERCENT_RH" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/ZnRh//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ChwInletTmp rdfs:label "Chilled Water Supply Temperature Sensor" ;
+        rdf:type "brick:Chilled_Water_Supply_Temperature_Sensor" ;
+        brick:hasUnit "unit:DEG_C" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/ChwInletTmp//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ChwOutletTmp rdfs:label "Chilled Water Return Temperature Sensor" ;
+        rdf:type "brick:Chilled_Water_Return_Temperature_Sensor" ;
+        brick:hasUnit "unit:DEG_C" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/ChwOutletTmp//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_Available rdfs:label "Availability Status" ;
+        rdf:type "brick:Availability_Status" ;
+        nsp:hasPath "{EBO_path}/{Id}/Variables/reliability/Availability//Value" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_RemoteShutdownAlarm rdfs:label "Remote Shutdown Alarm" ;
+        rdf:type "brick:Overridden_Off_Status" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Remote Shutdown Alarm//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_WaterUnderfloorAlarm rdfs:label "Water Underfloor Alarm" ;
+        rdf:type "brick:Liquid_Detection_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Water Underfloor Alarm//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_CondensateWaterOverflowAlarm rdfs:label "Condensate Water Overflow Alarm" ;
+        rdf:type "brick:Water_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Condensate Water Overflow Alarm//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HeaterFailure rdfs:label "Heater Failure" ;
+        rdf:type "brick:Unit_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Heater Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HumidifierFailure rdfs:label "Humidifier Failure" ;
+        rdf:type "brick:Unit_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Humidifier Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_FanMaintenance rdfs:label "Fan Maintenance" ;
+        rdf:type "brick:Maintenance_Required_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Fan Maintenance//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_AirFilterClogged rdfs:label "Air Filter Clogged" ;
+        rdf:type "brick:Filter_Status" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Air Filter Clogged//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_AirFilterMaintenance rdfs:label "Air Filter Maintenance" ;
+        rdf:type "brick:Maintenance_Required_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Air Filter Maintenance//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_AirFilterPressureDifference rdfs:label "Air Filter Pressure Difference" ;
+        rdf:type "brick:Pressure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Air Filter Pressure Difference//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ChilledWaterValveFailure rdfs:label "Chilled Water Valve Failure" ;
+        rdf:type "brick:Valve_Position_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Chilled Water Valve Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ChilledWaterValveMaintenance rdfs:label "Chilled Water Valve Maintenance" ;
+        rdf:type "brick:Maintenance_Required_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Chilled Water Valve Maintenance//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_CondensatePumpFailure rdfs:label "Condensate Pump Failure" ;
+        rdf:type "brick:Unit_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Condensate Pump Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LossofAirFlow rdfs:label "Loss of Air Flow" ;
+        rdf:type "brick:Air_Flow_Loss_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Loss of Air Flow//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LossofWaterFlow rdfs:label "Loss of Water Flow" ;
+        rdf:type "brick:Water_Loss_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Loss of Water Flow//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ChilledWaterLowFlow rdfs:label "Chilled Water Low Flow" ;
+        rdf:type "brick:Water_Loss_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Chilled Water Low Flow//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_DigitalInputSensorCommunication rdfs:label "Digital Input Sensor Communication" ;
+        rdf:type "brick:Communication_Loss_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Digital Input Sensor Communication//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HighReturnTemperature rdfs:label "High Return Temperature" ;
+        rdf:type "brick:High_Return_Air_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/High Return Temperature//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LowReturnTemperature rdfs:label "Low Return Temperature" ;
+        rdf:type "brick:Low_Return_Air_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Low Return Temperature//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HighReturnHumidity rdfs:label "High Return Humidity" ;
+        rdf:type "brick:High_Humidity_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/High Return Humidity//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LowReturnHumidity rdfs:label "Low Return Humidity" ;
+        rdf:type "brick:Low_Humidity_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Low Return Humidity//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HighSupplyTemperature rdfs:label "High Supply Temperature" ;
+        rdf:type "brick:High_Supply_Air_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/High Supply Temperature//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LowSupplyTemperature rdfs:label "Low Supply Temperature" ;
+        rdf:type "brick:Low_Supply_Air_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Low Supply Temperature//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HighSupplyHumidity rdfs:label "High Supply Humidity" ;
+        rdf:type "brick:High_Humidity_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/High Supply Humidity//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LowSupplyHumidity rdfs:label "Low Supply Humidity" ;
+        rdf:type "brick:Low_Humidity_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Low Supply Humidity//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HighRemoteTemperature rdfs:label "High Remote Temperature" ;
+        rdf:type "brick:Air_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/High Remote Temperature//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LowRemoteTemperature rdfs:label "Low Remote Temperature" ;
+        rdf:type "brick:Air_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Low Remote Temperature//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HighRemoteHumidity rdfs:label "High Remote Humidity" ;
+        rdf:type "brick:High_Humidity_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/High Remote Humidity//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LowRemoteHumidity rdfs:label "Low Remote Humidity" ;
+        rdf:type "brick:Low_Humidity_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Low Remote Humidity//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HighTemperatureInletChilledWater rdfs:label "High Temperature Inlet Chilled Water" ;
+        rdf:type "brick:Water_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/High Temperature Inlet Chilled Water//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LowTemperatureInletChilledWater rdfs:label "Low Temperature Inlet Chilled Water" ;
+        rdf:type "brick:Water_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Low Temperature Inlet Chilled Water//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_HighTemperatureOutletChilledWater rdfs:label "High Temperature Outlet Chilled Water" ;
+        rdf:type "brick:Water_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/High Temperature Outlet Chilled Water//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LowTemperatureOutletChilledWater rdfs:label "Low Temperature Outlet Chilled Water" ;
+        rdf:type "brick:Water_Temperature_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Low Temperature Outlet Chilled Water//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ReturnTemperatureSensorFailure rdfs:label "Return Temperature Sensor Failure" ;
+        rdf:type "brick:Sensor_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Return Temperature Sensor Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ReturnHumiditySensorFailure rdfs:label "Return Humidity Sensor Failure" ;
+        rdf:type "brick:Sensor_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Return Humidity Sensor Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_AirflowTemperatureSensorFailure rdfs:label "Airflow Temperature Sensor Failure" ;
+        rdf:type "brick:Sensor_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Airflow Temperature Sensor Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_SupplyTemperatureSensorFailure rdfs:label "Supply Temperature Sensor Failure" ;
+        rdf:type "brick:Sensor_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Supply Temperature Sensor Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_SupplyHumiditySensorFailure rdfs:label "Supply Humidity Sensor Failure" ;
+        rdf:type "brick:Sensor_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Supply Humidity Sensor Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_RemoteTemperatureSensorFailure rdfs:label "Remote Temperature Sensor Failure" ;
+        rdf:type "brick:Sensor_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Remote Temperature Sensor Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_RemoteHumiditySensorFailure rdfs:label "Remote Humidity Sensor Failure" ;
+        rdf:type "brick:Sensor_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Remote Humidity Sensor Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_StaticPressureSensorFailure rdfs:label "Static Pressure Sensor Failure" ;
+        rdf:type "brick:Sensor_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Static Pressure Sensor Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ChilledWaterPressureSensorFailure rdfs:label "Chilled Water Pressure Sensor Failure" ;
+        rdf:type "brick:Sensor_Failure_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Chilled Water Pressure Sensor Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_ChilledWaterFlowFailure rdfs:label "Chilled Water Flow Failure" ;
+        rdf:type "brick:Water_Loss_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Chilled Water Flow Failure//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_PowerLoss rdfs:label "Power Loss" ;
+        rdf:type "brick:Power_Loss_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Power Loss//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_PowerOverVoltageAlarm rdfs:label "Power Over Voltage Alarm" ;
+        rdf:type "brick:Power_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Power Over Voltage Alarm//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_PowerUnderVoltageAlarm rdfs:label "Power Under Voltage Alarm" ;
+        rdf:type "brick:Power_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Power Under Voltage Alarm//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_PowerFrequencyOffset rdfs:label "Power Frequency Offset" ;
+        rdf:type "brick:Power_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Power Frequency Offset//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_PowerPhaseLossAlarm rdfs:label "Power Phase Loss Alarm" ;
+        rdf:type "brick:Power_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Power Phase Loss Alarm//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_PowerPhaseReverseAlarm rdfs:label "Power Phase Reverse Alarm" ;
+        rdf:type "brick:Power_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Power Phase Reverse Alarm//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LossOfMaster rdfs:label "Loss of Unit Master" ;
+        rdf:type "brick:Communication_Loss_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Loss of Unit Master//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_LossOfSlave rdfs:label "Loss of Unit Slave" ;
+        rdf:type "brick:Communication_Loss_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/Loss of Unit Slave//AlarmState" ;
+        brick:isPointOf bldg:{Id} .
+      bldg:{Id}_SNMPDeviceOffline rdfs:label "SNMP Device Offline" ;
+        rdf:type "brick:Communication_Loss_Alarm" ;
+        nsp:hasPath "{EBO_path}/{Id}/Alarms/SNMP Device Offline//AlarmState" ;
+        brick:isPointOf bldg:{Id} .

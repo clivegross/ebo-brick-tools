@@ -1,0 +1,73 @@
+﻿bldg,rdfs:label,rdf:type,equipment_rdf:type,brick:hasLocation,brick:hasUnit,nsp:hasPath
+_FanFailure,Fan Failure,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Fan Failure//AlarmState
+_SaTmpSp,Supply Air Temperature Setpoint,brick:Supply_Air_Temperature_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/SaTmpSp//Value
+_ZnTmpSp,Zone Air Temperature Setpoint,brick:Zone_Air_Humidity_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/ZnTmpSp//Value
+_RaTmpSp,Return Air Temperature Setpoint,brick:Return_Air_Temperature_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/RaTmpSp//Value
+_RaRhSp,Return Air Humidity Setpoint,brick:Return_Air_Humidity_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:PERCENT_RH,{EBO_path}/{Id}/Setpoints/RaRhSp//Value
+_FanSts,Fan Run Status,,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Variables/FanSts//Value
+_FanSpd,Fan Speed Status,brick:Speed_Status,brick:Computer_Room_Air_Conditioning,,unit:PERCENT,{EBO_path}/{Id}/Variables/FanSpd//Value
+_ChwVlv,Chilled Water Valve,brick:Chilled_Water_Valve,brick:Computer_Room_Air_Conditioning,,unit:PERCENT,{EBO_path}/{Id}/Variables/ChwVlv//Value
+_VoltsA,Phase A Voltage,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsA//Value
+_VoltsB,Phase B Voltage,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsB//Value
+_VoltsC,Phase C Voltage,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsC//Value
+_PowerFreq,Power Frequency,brick:Frequency_Sensor,brick:Computer_Room_Air_Conditioning,,unit:HZ,{EBO_path}/{Id}/Variables/PowerFreq//Value
+_SaTmp1,Supply Air Temperature Sensor 1,brick:Supply_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/SaTmp1//Value
+_SaTmp2,Supply Air Temperature Sensor 2,brick:Supply_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/SaTmp2//Value
+_RaTmp,Return Air Temperature Sensor,brick:Return_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/RaTmp//Value
+_RaRh,Return Air Humidity Sensor,brick:Return_Air_Humidity_Sensor,brick:Computer_Room_Air_Conditioning,,unit:PERCENT_RH,{EBO_path}/{Id}/Variables/RaRh//Value
+_ZnTmp,Zone Air Temperature Sensor,brick:Zone_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,IRD-ICG-L05M-PIC-02,unit:DEG_C,{EBO_path}/{Id}/Variables/ZnTmp//Value
+_ZnRh,Zone Air Humidity Sensor,brick:Zone_Air_Humidity_Sensor,brick:Computer_Room_Air_Conditioning,IRD-ICG-L05M-PIC-02,unit:PERCENT_RH,{EBO_path}/{Id}/Variables/ZnRh//Value
+_ChwInletTmp,Chilled Water Supply Temperature Sensor,brick:Chilled_Water_Supply_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/ChwInletTmp//Value
+_ChwOutletTmp,Chilled Water Return Temperature Sensor,brick:Chilled_Water_Return_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/ChwOutletTmp//Value
+_Available,Availability Status,brick:Availability_Status,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Variables/reliability/Availability//Value
+_RemoteShutdownAlarm,Remote Shutdown Alarm,brick:Overridden_Off_Status,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Remote Shutdown Alarm//AlarmState
+_WaterUnderfloorAlarm,Water Underfloor Alarm,brick:Liquid_Detection_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Water Underfloor Alarm//AlarmState
+_CondensateWaterOverflowAlarm,Condensate Water Overflow Alarm,brick:Water_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Condensate Water Overflow Alarm//AlarmState
+_HeaterFailure,Heater Failure,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Heater Failure//AlarmState
+_HumidifierFailure,Humidifier Failure,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Humidifier Failure//AlarmState
+_FanMaintenance,Fan Maintenance,brick:Maintenance_Required_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Fan Maintenance//AlarmState
+_AirFilterClogged,Air Filter Clogged,brick:Filter_Status,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Air Filter Clogged//AlarmState
+_AirFilterMaintenance,Air Filter Maintenance,brick:Maintenance_Required_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Air Filter Maintenance//AlarmState
+_AirFilterPressureDifference,Air Filter Pressure Difference,brick:Pressure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Air Filter Pressure Difference//AlarmState
+_ChilledWaterValveFailure,Chilled Water Valve Failure,brick:Valve_Position_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Chilled Water Valve Failure//AlarmState
+_ChilledWaterValveMaintenance,Chilled Water Valve Maintenance,brick:Maintenance_Required_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Chilled Water Valve Maintenance//AlarmState
+_CondensatePumpFailure,Condensate Pump Failure,brick:Unit_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Condensate Pump Failure//AlarmState
+_LossofAirFlow,Loss of Air Flow,brick:Air_Flow_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Loss of Air Flow//AlarmState
+_LossofWaterFlow,Loss of Water Flow,brick:Water_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Loss of Water Flow//AlarmState
+_ChilledWaterLowFlow,Chilled Water Low Flow,brick:Water_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Chilled Water Low Flow//AlarmState
+_DigitalInputSensorCommunication,Digital Input Sensor Communication,brick:Communication_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Digital Input Sensor Communication//AlarmState
+_HighReturnTemperature,High Return Temperature,brick:High_Return_Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/High Return Temperature//AlarmState
+_LowReturnTemperature,Low Return Temperature,brick:Low_Return_Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Low Return Temperature//AlarmState
+_HighReturnHumidity,High Return Humidity,brick:High_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/High Return Humidity//AlarmState
+_LowReturnHumidity,Low Return Humidity,brick:Low_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Low Return Humidity//AlarmState
+_HighSupplyTemperature,High Supply Temperature,brick:High_Supply_Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/High Supply Temperature//AlarmState
+_LowSupplyTemperature,Low Supply Temperature,brick:Low_Supply_Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Low Supply Temperature//AlarmState
+_HighSupplyHumidity,High Supply Humidity,brick:High_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/High Supply Humidity//AlarmState
+_LowSupplyHumidity,Low Supply Humidity,brick:Low_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Low Supply Humidity//AlarmState
+_HighRemoteTemperature,High Remote Temperature,brick:Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/High Remote Temperature//AlarmState
+_LowRemoteTemperature,Low Remote Temperature,brick:Air_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Low Remote Temperature//AlarmState
+_HighRemoteHumidity,High Remote Humidity,brick:High_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/High Remote Humidity//AlarmState
+_LowRemoteHumidity,Low Remote Humidity,brick:Low_Humidity_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Low Remote Humidity//AlarmState
+_HighTemperatureInletChilledWater,High Temperature Inlet Chilled Water,brick:Water_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/High Temperature Inlet Chilled Water//AlarmState
+_LowTemperatureInletChilledWater,Low Temperature Inlet Chilled Water,brick:Water_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Low Temperature Inlet Chilled Water//AlarmState
+_HighTemperatureOutletChilledWater,High Temperature Outlet Chilled Water,brick:Water_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/High Temperature Outlet Chilled Water//AlarmState
+_LowTemperatureOutletChilledWater,Low Temperature Outlet Chilled Water,brick:Water_Temperature_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Low Temperature Outlet Chilled Water//AlarmState
+_ReturnTemperatureSensorFailure,Return Temperature Sensor Failure,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Return Temperature Sensor Failure//AlarmState
+_ReturnHumiditySensorFailure,Return Humidity Sensor Failure,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Return Humidity Sensor Failure//AlarmState
+_AirflowTemperatureSensorFailure,Airflow Temperature Sensor Failure,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Airflow Temperature Sensor Failure//AlarmState
+_SupplyTemperatureSensorFailure,Supply Temperature Sensor Failure,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Supply Temperature Sensor Failure//AlarmState
+_SupplyHumiditySensorFailure,Supply Humidity Sensor Failure,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Supply Humidity Sensor Failure//AlarmState
+_RemoteTemperatureSensorFailure,Remote Temperature Sensor Failure,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Remote Temperature Sensor Failure//AlarmState
+_RemoteHumiditySensorFailure,Remote Humidity Sensor Failure,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Remote Humidity Sensor Failure//AlarmState
+_StaticPressureSensorFailure,Static Pressure Sensor Failure,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Static Pressure Sensor Failure//AlarmState
+_ChilledWaterPressureSensorFailure,Chilled Water Pressure Sensor Failure,brick:Sensor_Failure_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Chilled Water Pressure Sensor Failure//AlarmState
+_ChilledWaterFlowFailure,Chilled Water Flow Failure,brick:Water_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Chilled Water Flow Failure//AlarmState
+_PowerLoss,Power Loss,brick:Power_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Power Loss//AlarmState
+_PowerOverVoltageAlarm,Power Over Voltage Alarm,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Power Over Voltage Alarm//AlarmState
+_PowerUnderVoltageAlarm,Power Under Voltage Alarm,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Power Under Voltage Alarm//AlarmState
+_PowerFrequencyOffset,Power Frequency Offset,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Power Frequency Offset//AlarmState
+_PowerPhaseLossAlarm,Power Phase Loss Alarm,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Power Phase Loss Alarm//AlarmState
+_PowerPhaseReverseAlarm,Power Phase Reverse Alarm,brick:Power_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Power Phase Reverse Alarm//AlarmState
+_LossOfMaster,Loss of Unit Master,brick:Communication_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Loss of Unit Master//AlarmState
+_LossOfSlave,Loss of Unit Slave,brick:Communication_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/Loss of Unit Slave//AlarmState
+_SNMPDeviceOffline,SNMP Device Offline,brick:Communication_Loss_Alarm,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Alarms/SNMP Device Offline//AlarmState
