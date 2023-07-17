@@ -6,19 +6,22 @@ namespace_prefixes:
   nsp: "https://w3id.org/se/building/nsp#"
 operations:
   -
+    conditions:
+      - |
+        '{rdf_type}' == "brick:Computer_Room_Air_Conditioning"  
     data: |-
       bldg:{Id} rdfs:label "{rdf_label}" ;
         rdf:type {rdf_type} .
   - 
     conditions:
       - |
-        '{brick_hasLocation}' != ""
+        '{brick_hasLocation}' != "" and '{rdf_type}' == "brick:Computer_Room_Air_Conditioning"
     data: |-
       bldg:{Id} brick:hasLocation bldg:{brick_hasLocation} .
   - 
     conditions:
       - |
-        '{brick_isFedBy}' != ""
+        '{brick_isFedBy}' != "" and '{rdf_type}' == "brick:Computer_Room_Air_Conditioning"
     data: |-
       bldg:{Id} brick:isFedBy bldg:{brick_isFedBy} .
   -
@@ -51,6 +54,7 @@ operations:
         nsp:hasPath "{EBO_path}/{Id}/Setpoints/RaRhSp//Value" ;
         brick:isPointOf bldg:{Id} .
       bldg:{Id}_FanSts rdfs:label "Fan Run Status" ;
+        rdf:type "brick:Fan_Status" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/FanSts//Value" ;
         brick:isPointOf bldg:{Id} .
       bldg:{Id}_FanSpd rdfs:label "Fan Speed Status" ;
@@ -105,13 +109,11 @@ operations:
         brick:isPointOf bldg:{Id} .
       bldg:{Id}_ZnTmp rdfs:label "Zone Air Temperature Sensor" ;
         rdf:type "brick:Zone_Air_Temperature_Sensor" ;
-        brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
         brick:hasUnit "unit:DEG_C" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/ZnTmp//Value" ;
         brick:isPointOf bldg:{Id} .
       bldg:{Id}_ZnRh rdfs:label "Zone Air Humidity Sensor" ;
         rdf:type "brick:Zone_Air_Humidity_Sensor" ;
-        brick:hasLocation "IRD-ICG-L05M-PIC-02" ;
         brick:hasUnit "unit:PERCENT_RH" ;
         nsp:hasPath "{EBO_path}/{Id}/Variables/ZnRh//Value" ;
         brick:isPointOf bldg:{Id} .

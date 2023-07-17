@@ -1,23 +1,5 @@
-#!/usr/bin/python3
-# File name: make_config_from_csv.py
-# Description: Creates a config yml for brickify from a equipment point types csv.
-# Used with brickify to construct a Brick Schema database from ttl files. Read:
-# https://brickschema.readthedocs.io/en/latest/brickify/index.html.
-# csv expected in the following format:
-# bldg,rdfs:label,rdf:type,equipment_rdf:type,brick:hasLocation,brick:hasUnit,nsp:hasPath
-# _SaTmpSp,Supply Air Temperature Setpoint,brick:Supply_Air_Temperature_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/SaTmpSp//Value
-# _ZnTmpSp,Zone Air Temperature Setpoint,brick:Zone_Air_Humidity_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/ZnTmpSp//Value
-# Author: Clive Gross
-# Last updated: 11-07-2023
 import csv
 import yaml
-
-# set the path to the equipment model points csv here:
-equipment_model_points_csv_file = "example/in_row_cooler_model_points.csv"
-# set the output config yaml file name here:
-config_yaml_file = "example/equipment_model_in_row_cooler.yml"
-# Update with the desired equipment rdf:type
-equipment_rdf_type = "brick:Computer_Room_Air_Conditioning"
 
 
 def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type):
@@ -56,6 +38,9 @@ def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf
     with open(template_header_yaml_file, "r") as template_file:
         template_yaml = template_file.read()
 
+    # Replace EQUIPMENT_TYPE with equipment_rdf_type
+    template_yaml = template_yaml.replace("{{EQUIPMENT_TYPE}}", equipment_rdf_type)
+
     # Concatenate the template YAML with the converted CSV data
     final_yaml = template_yaml
     if count > 0:
@@ -63,8 +48,7 @@ def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf
         final_yaml += f"    conditions:\n      - |\n"
         final_yaml += f"        '{{rdf_type}}' == \"{equipment_rdf_type}\"\n"
         final_yaml += f"    data: |-\n"
-
-    final_yaml += output
+        final_yaml += output
 
     # Write the final YAML data to a file
     with open(config_yaml_file, "w") as file:
@@ -72,5 +56,14 @@ def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf
 
     print(f"Config '{config_yaml_file}' complete. {count} points added.")
 
+
 if __name__ == '__main__':
+    # Example usage
+    # set the path to the equipment model points csv here:
+    equipment_model_points_csv_file = "example/in_row_cooler_model_points.csv"
+    # set the output config yaml file name here:
+    config_yaml_file = "example/in_row_cooler_model_points.yml"
+    # Update with the desired equipment rdf:type
+    equipment_rdf_type = "brick:Computer_Room_Air_Conditioning"
+    # Make the config file
     make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type)

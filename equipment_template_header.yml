@@ -6,18 +6,21 @@ namespace_prefixes:
   nsp: "https://w3id.org/se/building/nsp#"
 operations:
   -
+    conditions:
+      - |
+        '{rdf_type}' == "{{EQUIPMENT_TYPE}}"  
     data: |-
       bldg:{Id} rdfs:label "{rdf_label}" ;
         rdf:type {rdf_type} .
   - 
     conditions:
       - |
-        '{brick_hasLocation}' != ""
+        '{brick_hasLocation}' != "" and '{rdf_type}' == "{{EQUIPMENT_TYPE}}"
     data: |-
       bldg:{Id} brick:hasLocation bldg:{brick_hasLocation} .
   - 
     conditions:
       - |
-        '{brick_isFedBy}' != ""
+        '{brick_isFedBy}' != "" and '{rdf_type}' == "{{EQUIPMENT_TYPE}}"
     data: |-
       bldg:{Id} brick:isFedBy bldg:{brick_isFedBy} .

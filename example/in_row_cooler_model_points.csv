@@ -4,7 +4,7 @@ _SaTmpSp,Supply Air Temperature Setpoint,brick:Supply_Air_Temperature_Setpoint,b
 _ZnTmpSp,Zone Air Temperature Setpoint,brick:Zone_Air_Humidity_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/ZnTmpSp//Value
 _RaTmpSp,Return Air Temperature Setpoint,brick:Return_Air_Temperature_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Setpoints/RaTmpSp//Value
 _RaRhSp,Return Air Humidity Setpoint,brick:Return_Air_Humidity_Setpoint,brick:Computer_Room_Air_Conditioning,,unit:PERCENT_RH,{EBO_path}/{Id}/Setpoints/RaRhSp//Value
-_FanSts,Fan Run Status,,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Variables/FanSts//Value
+_FanSts,Fan Run Status,brick:Fan_Status,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Variables/FanSts//Value
 _FanSpd,Fan Speed Status,brick:Speed_Status,brick:Computer_Room_Air_Conditioning,,unit:PERCENT,{EBO_path}/{Id}/Variables/FanSpd//Value
 _ChwVlv,Chilled Water Valve,brick:Chilled_Water_Valve,brick:Computer_Room_Air_Conditioning,,unit:PERCENT,{EBO_path}/{Id}/Variables/ChwVlv//Value
 _VoltsA,Phase A Voltage,brick:Voltage_Sensor,brick:Computer_Room_Air_Conditioning,,unit:VOLT,{EBO_path}/{Id}/Variables/VoltsA//Value
@@ -15,8 +15,8 @@ _SaTmp1,Supply Air Temperature Sensor 1,brick:Supply_Air_Temperature_Sensor,bric
 _SaTmp2,Supply Air Temperature Sensor 2,brick:Supply_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/SaTmp2//Value
 _RaTmp,Return Air Temperature Sensor,brick:Return_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/RaTmp//Value
 _RaRh,Return Air Humidity Sensor,brick:Return_Air_Humidity_Sensor,brick:Computer_Room_Air_Conditioning,,unit:PERCENT_RH,{EBO_path}/{Id}/Variables/RaRh//Value
-_ZnTmp,Zone Air Temperature Sensor,brick:Zone_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,IRD-ICG-L05M-PIC-02,unit:DEG_C,{EBO_path}/{Id}/Variables/ZnTmp//Value
-_ZnRh,Zone Air Humidity Sensor,brick:Zone_Air_Humidity_Sensor,brick:Computer_Room_Air_Conditioning,IRD-ICG-L05M-PIC-02,unit:PERCENT_RH,{EBO_path}/{Id}/Variables/ZnRh//Value
+_ZnTmp,Zone Air Temperature Sensor,brick:Zone_Air_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/ZnTmp//Value
+_ZnRh,Zone Air Humidity Sensor,brick:Zone_Air_Humidity_Sensor,brick:Computer_Room_Air_Conditioning,,unit:PERCENT_RH,{EBO_path}/{Id}/Variables/ZnRh//Value
 _ChwInletTmp,Chilled Water Supply Temperature Sensor,brick:Chilled_Water_Supply_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/ChwInletTmp//Value
 _ChwOutletTmp,Chilled Water Return Temperature Sensor,brick:Chilled_Water_Return_Temperature_Sensor,brick:Computer_Room_Air_Conditioning,,unit:DEG_C,{EBO_path}/{Id}/Variables/ChwOutletTmp//Value
 _Available,Availability Status,brick:Availability_Status,brick:Computer_Room_Air_Conditioning,,,{EBO_path}/{Id}/Variables/reliability/Availability//Value
