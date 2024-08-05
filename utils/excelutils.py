@@ -1,31 +1,30 @@
 import pandas as pd
 
-def read_excel_filter_and_write_to_csv(excel_path, table_name=None, sheet_name=None, filter_column=None, filter_value=None, csv_path='filtered_data.csv'):
+def read_excel_filter_and_write_to_csv(input_excel_path, output_csv_path, sheet_name=0, filter_column=None, filter_value=None, columns_to_include=None):
     """
-    Reads an Excel workbook, filters data by a matching column, and writes the result to a CSV file.
+    Reads an Excel file, optionally filters rows based on a column value, optionally includes only specified columns,
+    and writes the result to a CSV file.
 
-    :param excel_path: Path to the Excel file.
-    :param table_name: Name of the table to read. If None, sheet_name must be provided.
-    :param sheet_name: Name of the sheet to read. Used if table_name is None.
-    :param filter_column: Column name to filter by.
-    :param filter_value: Value to filter by in the filter_column.
-    :param csv_path: Path to save the filtered data as a CSV file.
+    :param input_excel_path: Path to the input Excel file.
+    :param output_csv_path: Path to the output CSV file.
+    :param sheet_name: Name or index of the sheet to read.
+    :param filter_column: Column name to filter rows by.
+    :param filter_value: Value to filter rows by.
+    :param columns_to_include: List of column names to include in the output CSV.
     """
-    # Load the Excel file
-    if table_name:
-        # If table_name is provided, use it to read the specific table
-        df = pd.read_excel(excel_path, table_name=table_name)
-    elif sheet_name:
-        # If sheet_name is provided, use it to read the specific sheet
-        df = pd.read_excel(excel_path, sheet_name=sheet_name)
-    else:
-        raise ValueError("Either table_name or sheet_name must be provided.")
+    # Read the Excel file
+    df = pd.read_excel(input_excel_path, sheet_name=sheet_name)
 
-    # Filter the DataFrame if filter_column and filter_value are provided
+    # Filter rows if filter_column and filter_value are provided
     if filter_column and filter_value is not None:
-        filtered_df = df[df[filter_column] == filter_value]
-    else:
-        filtered_df = df
+        df = df[df[filter_column] == filter_value]
 
-    # Write the filtered DataFrame to a CSV file
-    filtered_df.to_csv(csv_path, index=False)
+    # Include only specified columns if columns_to_include is provided
+    if columns_to_include:
+        df = df[columns_to_include]
+
+    # Write the DataFrame to a CSV file
+    df.to_csv(output_csv_path, index=False)
+
+# Example usage
+# read_excel_filter_and_write_to_csv('input.xlsx', 'output.csv', sheet_name='Sheet1', filter_column='Status', filter_value='Active', columns_to_include=['Name', 'Age'])
