@@ -28,8 +28,9 @@
 # combine_ttl_files(input_files, output_file)
 
 # https://brickschema.readthedocs.io/en/latest/merging.html
+import os
 import brickschema
-from brickschema.merge import merge_type_cluster
+# from brickschema.merge import merge_type_cluster
 from rdflib import Namespace
 
 # both graphs must have the same namespace
@@ -40,13 +41,54 @@ def validate(g):
     valid, _, report = g.validate()
     if not valid:
         raise Exception(report)
+    
+def file_to_model(input_file):
+    return brickschema.Graph().load_file(input_file)
+    
+def model_to_file(g, output_file, format="ttl"):
+    g.serialize(output_file, format=format)
+    
+def merge_models(
+        f1, # input file 1
+        f2, # input file 2
+        output_file="merged.ttl",
+        format="ttl",
+        BLDG=Namespace("http://example.org/building/"),
+        similarity_threshold=0.1,
+        delete_old_files=False
+    ):
+    # load the model files into the graph and validate
+    print(f'loading {f1} into graph...')
+    g1 = brickschema.Graph().load_file(f1)
+    print(f'validating {f1}...')
+    validate(g1)
+    print(f'loading {f2} into graph...')
+    g2 = brickschema.Graph().load_file(f2)
+    print(f'validating {f2}...')
+    validate(g2)
+    # merge the models and validate
+    print("Merging models...")
+    G = merge_type_cluster(g1, g2, BLDG, similarity_threshold=similarity_threshold)
+    print("Merged model created, validating...")
+    validate(G)
+    print("Validation successful!")
+    # write the merged model to a file
+    print(f"Writing merged model to {output_file}...")
+    G.serialize(output_file, format=format)
+    print(f"Model written to {output_file} successfully!")
+    # delete the old files if required
+    if delete_old_files:
+        print("Deleting old files...")
+        os.remove(f1)
+        os.remove(f2)
+        print("Old files deleted successfully!")
 
-g1 = brickschema.Graph().load_file("bldg1")
-#validate(g1)
+# g1 = brickschema.Graph().load_file("bldg1")
+# #validate(g1)
 
-g2 = brickschema.Graph().load_file("bldg2")
-#validate(g2)
+# g2 = brickschema.Graph().load_file("bldg2")
+# #validate(g2)
 
-G = merge_type_cluster(g1, g2, BLDG, similarity_threshold=0.1)
-validate(G)
-G.serialize("merged.ttl", format="ttl")
+# G = merge_type_cluster(g1, g2, BLDG, similarity_threshold=0.1)
+# validate(G)
+# G.serialize("merged.ttl", format="ttl")

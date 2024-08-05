@@ -1,10 +1,20 @@
 import csv
-import yaml
+import os
+# import yaml
 
 
-def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type):
+def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type, multi_location=False, multi_fed=False):
     # this yaml file contains boilerplate header yaml required in most configs
-    template_header_yaml_file = "equipment_template_header.yml"
+    template_header_standard_yaml_file = "equipment_template_header.yml"
+    template_header_multi_location_yaml_file = "equipment_template_header_multiple_hasLocation.yml"
+    template_header_multi_fed_yaml_file = "equipment_template_header_multiple_isFedBy.yml"
+
+    if multi_location:
+        template_header_yaml_file = template_header_multi_location_yaml_file
+    elif multi_fed:
+        template_header_yaml_file = template_header_multi_fed_yaml_file
+    else:
+        template_header_yaml_file = template_header_standard_yaml_file
 
     data = []
 
@@ -25,7 +35,7 @@ def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf
             output += f"      bldg:{{Id}}{row['bldg']} rdfs:label \"{row['rdfs:label']}\" ;\n"
             if row['rdf:type']:
                 output += f"        rdf:type \"{row['rdf:type']}\" ;\n"
-            if row['brick:hasLocation']:
+            if row.get('brick:hasLocation'):
                 output += f"        brick:hasLocation \"{row['brick:hasLocation']}\" ;\n"
             if row['brick:hasUnit']:
                 output += f"        brick:hasUnit \"{row['brick:hasUnit']}\" ;\n"
@@ -35,6 +45,12 @@ def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf
             count += 1
 
     # Read the template YAML file
+    # Instead of this:
+    # with open(template_header_yaml_file, "r") as template_file:
+
+    # Try using the absolute path to the file
+    template_header_yaml_file = os.path.join(os.path.dirname(__file__), template_header_yaml_file)
+    print(f"template_header_yaml_file: {template_header_yaml_file}")
     with open(template_header_yaml_file, "r") as template_file:
         template_yaml = template_file.read()
 

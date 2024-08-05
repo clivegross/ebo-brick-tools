@@ -1,3 +1,4 @@
 # ignorte the 360 Files.xml
 _~*
 __pycache__/
+desktop.ini

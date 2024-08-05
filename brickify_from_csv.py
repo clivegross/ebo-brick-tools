@@ -8,7 +8,7 @@
 # Author: Clive Gross
 # Last updated: 11-07-2023
 import subprocess
-from utils.fileutils import check_and_convert_utf8
+from .utils.fileutils import check_and_convert_utf8
 
 
 def execute_command(command):

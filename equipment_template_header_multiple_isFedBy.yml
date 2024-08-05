@@ -27,6 +27,12 @@ operations:
   - 
     conditions:
       - |
+        '{brick_isFedBy_2}' != "" and '{rdf_type}' == "{{EQUIPMENT_TYPE}}"
+    data: |-
+      bldg:{Id} brick:isFedBy bldg:{brick_isFedBy_2} .
+  - 
+    conditions:
+      - |
         '{brick_isPartOf}' != "" and '{rdf_type}' == "{{EQUIPMENT_TYPE}}"
     data: |-
-      bldg:{Id} brick:isPartOf bldg:{brick_isPartOf} .      
+      bldg:{Id} brick:isPartOf bldg:{brick_isPartOf} .        
