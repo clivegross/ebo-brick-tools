@@ -1,9 +1,23 @@
 import csv
 import os
-# import yaml
+import tempfile
+from ebobricktools.utils.fileutils import filter_csv_by_column
 
 
 def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type, multi_location=False, multi_fed=False):
+    """
+    Generate a configuration YAML file from a CSV file containing equipment model points.
+
+    :param equipment_model_points_csv_file: Path to the input CSV file containing equipment model points.
+    :param config_yaml_file: Path to the output YAML file to be generated.
+    :param equipment_rdf_type: The RDF type of the equipment to filter the CSV data.
+    :param multi_location: Boolean flag indicating whether to use a multi-location template.
+    :param multi_fed: Boolean flag indicating whether to use a multi-fed template.
+
+    The function reads the input CSV file, filters the data based on the specified RDF type,
+    and generates a configuration YAML file using the appropriate template based on the
+    multi_location and multi_fed flags.
+    """
     # this yaml file contains boilerplate header yaml required in most configs
     template_header_standard_yaml_file = "equipment_template_header.yml"
     template_header_multi_location_yaml_file = "equipment_template_header_multiple_hasLocation.yml"
@@ -71,6 +85,47 @@ def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf
         file.write(final_yaml)
 
     print(f"Config '{config_yaml_file}' complete. {count} points added.")
+
+def make_config_per_equipment_type(equipment_model_points_csv_file, output_config_yaml_file_prefix, equipment_type_col='EQUIPMENT TYPE', equipment_rdf_type_col='equipment_rdf:type', multi_location=False, multi_fed=False):
+    """
+    Generate configuration YAML file/s from a CSV file containing equipment model points. One config file per equipment type. Returns a dictionary of equipment types and their corresponding config YAML file paths.
+
+    :param equipment_model_points_csv_file: Path to the input CSV file containing equipment model points.
+    :param output_config_yaml_file_prefix: Prefix for the output YAML file paths to be generated.
+    :param equipment_type_col: Column name for equipment types in the CSV file.
+    :param multi_location: Boolean flag indicating whether to use a multi-location template.
+    :param multi_fed: Boolean flag indicating whether to use a multi-fed template.
+    :return: Dictionary of equipment types and their corresponding config YAML file paths.
+    """
+    equipment_configs = {}
+
+    # Read the CSV file
+    data = []
+    with open(equipment_model_points_csv_file, "r", encoding="utf-8-sig") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            data.append(row)
+
+    # Get unique equipment types
+    # Get unique equipment types and their corresponding RDF types
+    equipment_types = {row[equipment_type_col]: row[equipment_rdf_type_col] for row in data}
+
+    # Generate config for each equipment type
+    for idx, (equipment_type, equipment_rdf_type) in enumerate(equipment_types.items(), start=1):
+         # Create a temporary CSV file for the current equipment type
+        temp_csv_file_path = os.path.join(tempfile.gettempdir(), "temp_equipment_model_points.csv")
+        filter_csv_by_column(equipment_model_points_csv_file, temp_csv_file_path, equipment_type_col, equipment_type)
+        
+        # Generate the config YAML file for the current equipment type
+        output_config_yaml_file = f"{output_config_yaml_file_prefix}_{idx}.yml"
+        make_config(temp_csv_file_path, output_config_yaml_file, equipment_rdf_type, multi_location, multi_fed)
+        equipment_configs[equipment_type] = output_config_yaml_file
+
+        # Remove the temporary CSV file
+        os.remove(temp_csv_file_path)
+
+    return equipment_configs
+
 
 
 if __name__ == '__main__':
