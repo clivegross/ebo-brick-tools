@@ -2,6 +2,7 @@ import csv
 import os
 import tempfile
 from ebobricktools.utils.fileutils import filter_csv_by_column
+import pandas as pd
 
 
 def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type, multi_location=False, multi_fed=False):
@@ -86,11 +87,12 @@ def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf
 
     print(f"Config '{config_yaml_file}' complete. {count} points added.")
 
-def make_config_per_equipment_type(equipment_model_points_csv_file, output_config_yaml_file_prefix, equipment_type_col='EQUIPMENT TYPE', equipment_rdf_type_col='equipment_rdf:type', multi_location=False, multi_fed=False):
+def make_config_per_equipment_type(equipment_model_points_csv_file, equipment_types=None, output_config_yaml_file_prefix='', equipment_type_col='EQUIPMENT TYPE', equipment_rdf_type_col='equipment_rdf:type', multi_location=False, multi_fed=False):
     """
     Generate configuration YAML file/s from a CSV file containing equipment model points. One config file per equipment type. Returns a dictionary of equipment types and their corresponding config YAML file paths.
 
     :param equipment_model_points_csv_file: Path to the input CSV file containing equipment model points.
+    :param equipment_types: List of equipment types to generate config YAML files for. If None, all unique equipment types in the model points CSV file will be used.
     :param output_config_yaml_file_prefix: Prefix for the output YAML file paths to be generated.
     :param equipment_type_col: Column name for equipment types in the CSV file.
     :param multi_location: Boolean flag indicating whether to use a multi-location template.
@@ -99,16 +101,17 @@ def make_config_per_equipment_type(equipment_model_points_csv_file, output_confi
     """
     equipment_configs = {}
 
-    # Read the CSV file
-    data = []
-    with open(equipment_model_points_csv_file, "r", encoding="utf-8-sig") as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            data.append(row)
-
-    # Get unique equipment types
-    # Get unique equipment types and their corresponding RDF types
-    equipment_types = {row[equipment_type_col]: row[equipment_rdf_type_col] for row in data}
+    # If equipment types are not provided, get all unique equipment types from the CSV file
+    if equipment_types is None:
+        # Read the CSV file
+        data = []
+        with open(equipment_model_points_csv_file, "r", encoding="utf-8-sig") as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                data.append(row)
+        # Get unique equipment types
+        # Get unique equipment types and their corresponding RDF types
+        equipment_types = {row[equipment_type_col]: row[equipment_rdf_type_col] for row in data}
 
     # Generate config for each equipment type
     for idx, (equipment_type, equipment_rdf_type) in enumerate(equipment_types.items(), start=1):
@@ -125,6 +128,25 @@ def make_config_per_equipment_type(equipment_model_points_csv_file, output_confi
         os.remove(temp_csv_file_path)
 
     return equipment_configs
+
+
+def get_equipment_types_from_csv(csv_file_path, equipment_type_col='EQUIPMENT TYPE', equipment_rdf_type_col='rdf_type'):
+    """
+    Get unique equipment types and their corresponding RDF types from a CSV file.
+
+    :param csv_file_path: Path to the input CSV file.
+    :param equipment_type_col: Column name for equipment types in the CSV file.
+    :param equipment_rdf_type_col: Column name for RDF types in the CSV file.
+    :return: Dictionary of equipment types and their corresponding RDF types, eg:
+                {'Audio Visual Systems': 'brick:Audio_Visual_System'}
+    """
+    # Read the CSV file
+    data = pd.read_csv(csv_file_path)
+
+    # Get unique equipment types and their corresponding RDF types
+    equipment_types = {row[equipment_type_col]: row[equipment_rdf_type_col] for _, row in data.iterrows()}
+
+    return equipment_types
 
 
 

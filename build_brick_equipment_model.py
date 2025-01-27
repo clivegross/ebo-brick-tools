@@ -76,11 +76,11 @@ def validate_and_merge_models(models, output_file, delete_old_files=True, valida
                 else:
                     merge_models(model, output_file, output_file, format="ttl", validate=validate)
                 # delete individual model files after merging into federated model
-                if delete_old_files:
-                    print(f"Removing {model}")
-                    os.remove(model)
             except Exception as e:
                 print(f"Error merging {model} with {output_file}: {e}")
+        if delete_old_files:
+            print(f"Removing {model}")
+            os.remove(model)
 
 
 if __name__ == '__main__':
