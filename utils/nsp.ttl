@@ -1,0 +1,141 @@
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix nsp: <https://w3id.org/se/building/nsp#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix ref: <https://brickschema.org/schema/Brick/ref#> .
+@prefix s223: <http://data.ashrae.org/standard223#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix bacnet: <http://data.ashrae.org/bacnet/2020#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix tag: <https://brickschema.org/schema/BrickTag#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bldg: <https://example.com/bldg#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bsh: <https://brickschema.org/schema/BrickShape#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix qudtqk: <http://qudt.org/vocab/quantitykind/> .
+@prefix sdo: <http://schema.org/> .
+
+skos:definition a owl:AnnotationProperty .
+
+<https://w3id.org/se/building/nsp> a owl:Ontology;
+  rdfs:label "NSP Ontology";
+  owl:imports <https://brickschema.org/schema/Brick#> .
+
+nsp:hasChild a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty;
+  skos:definition "A generic relation for child relationships." .
+
+nsp:hasParent a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty;
+  skos:definition "A generic relation for parent relationships." .
+
+nsp:hasAlarm a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty;
+  rdfs:subPropertyOf nsp:hasObject;
+  rdfs:label "Has alarm";
+  rdfs:seeAlso "The subject is associated with an EBO alarm identified by the object." .
+
+nsp:hasObject a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty;
+  rdfs:label "Has object";
+  skos:definition "The subject is associated with an EBO object identified by the object." .
+
+nsp:hasPath a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty,
+    owl:FunctionalProperty;
+  rdfs:label "Has path";
+  skos:definition "The subject is either a representative of an EBO object or an EBO object property. The object is an identifier of an EBO path using a literal." .
+
+nsp:hasProperty a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty,
+    owl:FunctionalProperty;
+  rdfs:label "Has property";
+  skos:definition "The subject is associated with an EBO property identified by the object." .
+
+nsp:hasPropertyOnObject a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty,
+    owl:FunctionalProperty;
+  rdfs:subPropertyOf nsp:hasObject;
+  rdfs:label "Has property on object";
+  skos:definition """The subject is associated with an EBO property on an object identified by the object.
+
+I.e the property part is not part of the semantic object identifier.""" .
+
+nsp:hasServer a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty,
+    owl:FunctionalProperty;
+  rdfs:label "Has server";
+  skos:definition """The subject is associated with an EBO server identified by the object.
+
+I.e the property part is not part of the semantic object identifier.""" .
+
+nsp:hasSchedule a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty;
+  rdfs:subPropertyOf nsp:hasObject;
+  rdfs:label "Has schedule";
+  skos:definition "The subject is associated with an EBO schedule identified by the object." .
+
+nsp:hasTrendLog a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty;
+  rdfs:subPropertyOf nsp:hasObject;
+  rdfs:label "Has trendlog";
+  skos:definition "The subject is associated with an EBO trend log identified by the object." .
+
+nsp:hasPresentation a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty;
+  rdfs:subPropertyOf nsp:hasObject;
+  rdfs:label "Has presenatation";
+  skos:definition "The subject is associated with an EBO presentation identified by the object." .
+
+nsp:removeProperty a owl:AsymmetricProperty, owl:IrreflexiveProperty, owl:ObjectProperty;
+  rdfs:label "Remove property";
+  skos:definition "Removes an inherited property." .
+
+nsp:Entity a owl:Class .
+
+nsp:EntityProperty a owl:Class;
+  rdfs:subClassOf owl:ObjectProperty .
+
+brick:hasPart rdfs:subPropertyOf nsp:hasChild .
+
+brick:feeds rdfs:subPropertyOf nsp:hasChild .
+
+brick:meters rdfs:subPropertyOf nsp:hasParent .
+
+brick:isMeteredBy rdfs:subPropertyOf nsp:hasChild .
+
+brick:hasLocation rdfs:subPropertyOf nsp:hasParent .
+
+brick:hasSubMeter rdfs:subPropertyOf nsp:hasChild .
+
+brick:isSubMeterOf rdfs:subPropertyOf nsp:hasParent .
+
+brick:isLocationOf rdfs:subPropertyOf nsp:hasChild .
+
+brick:isFedBy rdfs:subPropertyOf nsp:hasParent .
+
+brick:isPointOf rdfs:subPropertyOf nsp:hasParent .
+
+brick:hasPoint rdfs:subPropertyOf nsp:hasChild .
+
+brick:isPartOf rdfs:subPropertyOf nsp:hasParent .
+
+brick:isRegulatedBy rdfs:subPropertyOf nsp:hasParent .
+
+brick:Equipment rdfs:subClassOf nsp:Entity .
+
+brick:Location rdfs:subClassOf nsp:Entity .
+
+brick:Collection rdfs:subClassOf nsp:Entity .
+
+brick:EntityProperty rdfs:subClassOf nsp:EntityProperty .
+
+brick:Point rdfs:subClassOf nsp:Entity .
+
+brick:hasAddress rdfs:subClassOf nsp:EntityProperty .
+
+brick:hasUnit rdfs:subClassOf nsp:EntityProperty .
+
+brick:Measurable rdfs:subClassOf nsp:Entity .
+
+brick:Meter nsp:removeProperty brick:isMeteredBy .
