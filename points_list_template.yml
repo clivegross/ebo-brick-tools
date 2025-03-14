@@ -1,0 +1,34 @@
+---
+namespace_prefixes:
+  brick: "https://brickschema.org/schema/Brick#"
+  ext: "https://example.com/schema/BrickExtension#"
+  unit: "http://qudt.org/vocab/unit/"
+  nsp: "https://w3id.org/se/building/nsp#"
+operations:
+  -
+    conditions:
+      - |
+        '{in semantic model}' == "YES"
+    data: |-
+      bldg:{Id} rdfs:label "{rdf_label}" ;
+        rdf:type "{rdf_type}" ;
+  - 
+    conditions:
+      - |
+        '{brick_hasUnit}' != "" and '{in semantic model}' == "YES"
+    data: |-
+      bldg:{Id} brick:hasUnit "{brick_hasUnit}" .
+  - 
+    conditions:
+      - |
+        '{EBO_path}' != "" and '{in semantic model}' == "YES"
+    data: |-
+      bldg:{Id} nsp:hasPath "{EBO_path}//{point_property}" .
+  -
+    conditions:
+      - |
+        '{brick_isPointOf}' != "" and '{in semantic model}' == "YES"
+    data: |-
+      bldg:{Id} brick:isPointOf bldg:{brick_isPointOf} .
+
+      

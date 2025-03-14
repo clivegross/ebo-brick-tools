@@ -1,46 +1,30 @@
 from brickschema.namespaces import BRICK
 from brickschema.graph import Graph
-
-# def combine_ttl_files(input_files, output_file):
-#     combined_data = ""
-#     # Read data from each input file and combine
-#     for file in input_files:
-#         with open(file, 'r') as f:
-#             combined_data += f.read()
-#     # Create a new graph
-#     graph = Graph()
-#     # Load the combined data into the graph
-#     graph.load_rdf(combined_data, format="ttl")
-#     # Validate the graph against the Brick schema
-#     validation_result = graph.validate()
-#     if validation_result:
-#         print("Validation successful!")
-#     else:
-#         print("Validation failed!")
-#     # Write the combined data to the output file
-#     with open(output_file, 'w') as f:
-#         f.write(combined_data)
-#     print("Files combined successfully!")
-
-# Example usage
-# input_files = ["file1.ttl", "file2.ttl", "file3.ttl"]
-# output_file = "combined.ttl"
-# combine_ttl_files(input_files, output_file)
-
-# https://brickschema.readthedocs.io/en/latest/merging.html
+from importlib.resources import files
 import os
 import brickschema
 from brickschema.merge import merge_type_cluster
 from rdflib import Namespace
+# https://brickschema.readthedocs.io/en/latest/merging.html
 
 # both graphs must have the same namespace
 # AND must have RDFS.label for all entities
 BLDG = Namespace("http://example.org/building/")
+NSP = files(__package__).joinpath("nsp.ttl")
 
 def validate(g):
+    # Initialize the Brick graph
+    graph = brickschema.Graph()
+    print(f"Loading {NSP} into graph...")
+    graph.load_file(NSP)
     if isinstance(g, str):
-        g = brickschema.Graph().load_file(g)
-    valid, _, report = g.validate()
+        print(f"Loading {g} into graph...")
+        graph.load_file(g)
+    else:
+        print("Merging provided graph into the namespace graph...")
+        graph += g
+    print("Validating graph...")
+    valid, _, report = graph.validate()
     if not valid:
         raise Exception(report)
     return (valid, report)
@@ -91,39 +75,65 @@ def merge_models(
         print("Old files deleted successfully!")
 
 def dirty_append_models(
-        f1, # input file 1
-        f2, # input file 2
-        output_file="merged.ttl",
-    ):
-    '''
-    Use this to reduce merge time when you know the data is good and there is know complex joining required, just appending.
-    Skip the first @prefix declarations and blank row from the second input file, then just append everything else to the end of the first file and write to output_file.
-    ```
-    @prefix bldg: <https://example.com/bldg#> .
-    @prefix brick: <https://brickschema.org/schema/Brick#> .
-    @prefix nsp: <https://w3id.org/se/building/nsp#> .
-    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    f1,  # input file 1
+    f2,  # input file 2
+    output_file="merged.ttl",
+):
+    """
+    Appends two TTL files, ensuring all unique @prefix declarations from both files 
+    are included at the top of the merged file. Skips duplicate @prefix lines and 
+    blank rows from the second file during the merge.
 
-    ```
-    '''
-    def filter_lines(lines):
+    Args:
+        f1 (str): Path to the first TTL file.
+        f2 (str): Path to the second TTL file.
+        output_file (str): Path to the output merged TTL file.
+
+    Example:
+        Input TTLs:
+        @prefix bldg: <https://example.com/bldg#> .
+        @prefix brick: <https://brickschema.org/schema/Brick#> .
+
+        Result:
+        @prefix bldg: <https://example.com/bldg#> .
+        @prefix brick: <https://brickschema.org/schema/Brick#> .
+        @prefix nsp: <https://w3id.org/se/building/nsp#> .
+    """
+
+    def extract_prefixes(lines):
+        """Extracts @prefix declarations from TTL lines."""
+        return {line.strip() for line in lines if line.strip().startswith("@prefix")}
+
+    def filter_non_prefix_lines(lines):
+        """Filters out @prefix declarations and blank lines."""
         return [line for line in lines if not line.strip().startswith("@prefix") and line.strip()]
 
-    # Read the first file
+    # Read and process the first file
     with open(f1, 'r') as f:
         data1 = f.readlines()
+        prefixes1 = extract_prefixes(data1)
+        non_prefix_data1 = filter_non_prefix_lines(data1)
 
-    # Read the second file and filter lines
+    # Read and process the second file
     with open(f2, 'r') as f:
         data2 = f.readlines()
-        filtered_data2 = filter_lines(data2)
+        prefixes2 = extract_prefixes(data2)
+        non_prefix_data2 = filter_non_prefix_lines(data2)
+
+    # Combine unique prefixes
+    all_prefixes = sorted(prefixes1 | prefixes2)
 
     # Write to the output file
     with open(output_file, 'w') as f:
-        f.writelines(data1)
-        f.writelines(filtered_data2)
+        # Write unique prefixes first
+        f.writelines(line + "\n" for line in all_prefixes)
+        f.write("\n")  # Add a blank line for separation
+        # Write non-prefix content from both files
+        f.writelines(non_prefix_data1)
+        f.writelines(non_prefix_data2)
 
-    print(f"Appended {f2} to {f1} and wrote to {output_file} successfully!")
+    print(f"Merged {f1} and {f2} into {output_file} successfully!")
+
 
 # g1 = brickschema.Graph().load_file("bldg1")
 # #validate(g1)

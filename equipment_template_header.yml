@@ -29,4 +29,10 @@ operations:
       - |
         '{brick_isPartOf}' != "" and '{rdf_type}' == "{{EQUIPMENT_TYPE}}"
     data: |-
-      bldg:{Id} brick:isPartOf bldg:{brick_isPartOf} .      
+      bldg:{Id} brick:isPartOf bldg:{brick_isPartOf} .
+  - 
+    conditions:
+      - |
+        '{brick_feeds}' != "" and '{rdf_type}' == "{{EQUIPMENT_TYPE}}"
+    data: |-
+      bldg:{Id} brick:feeds bldg:{brick_feeds} .         

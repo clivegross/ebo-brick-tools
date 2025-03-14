@@ -1,0 +1,7 @@
+---
+namespace_prefixes:
+  brick: "https://brickschema.org/schema/Brick#"
+  ext: "https://example.com/schema/BrickExtension#"
+  unit: "http://qudt.org/vocab/unit/"
+  nsp: "https://w3id.org/se/building/nsp#"
+operations:      

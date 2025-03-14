@@ -5,7 +5,7 @@ from ebobricktools.utils.fileutils import filter_csv_by_column
 import pandas as pd
 
 
-def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type, multi_location=False, multi_fed=False):
+def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf_type, multi_location=False, multi_fed=False, points_only=False):
     """
     Generate a configuration YAML file from a CSV file containing equipment model points.
 
@@ -23,11 +23,14 @@ def make_config(equipment_model_points_csv_file, config_yaml_file, equipment_rdf
     template_header_standard_yaml_file = "equipment_template_header.yml"
     template_header_multi_location_yaml_file = "equipment_template_header_multiple_hasLocation.yml"
     template_header_multi_fed_yaml_file = "equipment_template_header_multiple_isFedBy.yml"
+    template_header_points_only_yaml_file = "equipment_points_only_template_header.yml"
 
     if multi_location:
         template_header_yaml_file = template_header_multi_location_yaml_file
     elif multi_fed:
         template_header_yaml_file = template_header_multi_fed_yaml_file
+    elif points_only:
+        template_header_yaml_file = template_header_points_only_yaml_file
     else:
         template_header_yaml_file = template_header_standard_yaml_file
 

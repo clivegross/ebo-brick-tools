@@ -9,7 +9,7 @@ def read_excel_filter_and_write_to_csv(input_excel_path, output_csv_path, sheet_
     :param output_csv_path: Path to the output CSV file.
     :param sheet_name: Name or index of the sheet to read.
     :param filter_column: For single column/value filter, column name to filter rows by.
-    :param filter_value: For single column/value filter, value to filter rows by.
+    :param filter_value: For single column/value filter, value(s) to filter rows by (can be a single value or a list).
     :param columns_to_include: List of column names to include in the output CSV.
     :param filters: For multiple column/value filters, list of tuples where each tuple contains a column name and a value to filter rows by.
     # Example usage
@@ -27,12 +27,18 @@ def read_excel_filter_and_write_to_csv(input_excel_path, output_csv_path, sheet_
 
     # Filter rows if filter_column and filter_value are provided
     if filter_column and filter_value is not None:
-        df = df[df[filter_column] == filter_value]
+        if isinstance(filter_value, list):
+            df = df[df[filter_column].isin(filter_value)]  # Handle multiple values
+        else:
+            df = df[df[filter_column] == filter_value]  # Handle single value
 
     # Apply filters
     if filters:
         for column, value in filters:
-            df = df[df[column] == value]
+            if isinstance(value, list):
+                df = df[df[column].isin(value)]
+            else:
+                df = df[df[column] == value]
 
     # Include only specified columns if columns_to_include is provided
     if columns_to_include:

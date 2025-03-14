@@ -40,6 +40,23 @@ def filter_csv_by_column(input_csv_path, output_csv_path, filter_column, filter_
     filtered_df.to_csv(output_csv_path, index=False)
 
 
+def get_unique_values_from_column(input_csv_path, column_name):
+    """
+    Load a CSV file and return a list of unique values from a specified column.
+
+    :param input_csv_path: Path to the input CSV file.
+    :param column_name: Column name from which to extract unique values.
+    :return: List of unique values from the specified column.
+    """
+    # Load the CSV file into a DataFrame
+    df = pd.read_csv(input_csv_path)
+
+    # Extract unique values from the specified column
+    unique_values = df[column_name].dropna().unique().tolist()
+
+    return unique_values
+
+
 
 
 if __name__ == '__main__':
